@@ -49,6 +49,7 @@ Last updated: 2026
 - [x] style.css shared stylesheet created
 - [x] Mobile filter collapse working correctly
 - [x] URL parameters update on filter click (?view= and ?client=)
+- [x] Removed dev notes from index (see below)
 
 ---
 
@@ -64,6 +65,16 @@ Last updated: 2026
 - Surface: `#242426` / Border: `#2e2e32` / Border mid: `#3a3a3e`
 - Muted: `#52525a` / Mid: `#7a7a84` / Text: `#d0d0d8` / Bright: `#eeeef2`
 - Fonts: Outfit (headings) · Inter (body) · Space Mono (mono/labels)
+
+---
+
+Dev Notes — Homepage
+Hero Images
+Three slides need real images chosen. Uncomment the <img> tags inside each .hero-slide div and replace placeholder filenames. William to choose one standout piece per slide. Hero auto-advances every 5 seconds.
+Discipline & Client Card Images
+Each card has a commented-out <img> tag. William to choose one representative image per discipline and per client. Replace CHOOSE_ONE.jpg with the actual filename. Cards link directly to pre-filtered portfolio views.
+Still To Do
+404.html router for clean slug URLs (/microsoft → portfolio filtered). About and Contact pages. Nordstrom, Nickelodeon, Stone Arch Books, Tech Smart Kids client cards not shown here — add if William wants them visible on homepage. Animation disciplines hidden until video files are uploaded.
 
 ---
 
