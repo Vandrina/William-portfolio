@@ -379,23 +379,58 @@
     position: relative;
     cursor: pointer;
     display: block;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, opacity 0.3s ease;
+    background: var(--surface);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   }
   .gal-item:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 28px rgba(0,0,0,0.45);
     border-color: var(--border-mid);
   }
-  .gal-item.hidden {
+  .gal-item.hidden { display: none; }
+
+  /* Shimmer skeleton while loading */
+  .gal-item::before {
+    content: '';
+    display: block;
+    padding-top: 75%; /* 4:3 placeholder ratio */
+    background: linear-gradient(
+      90deg,
+      var(--surface) 0%,
+      var(--bg-3) 40%,
+      var(--surface) 80%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.4s infinite;
+  }
+  .gal-item.img-loaded::before {
     display: none;
   }
+  @keyframes shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  /* Image blur-up */
   .gal-item img {
     display: block;
     width: 100%;
     height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
-  .gal-item img.lazy { opacity: 0; transition: opacity 0.3s ease; }
-  .gal-item img.loaded { opacity: 1; }
+  .gal-item img.lazy {
+    opacity: 0;
+    filter: blur(12px);
+    transform: scale(1.04);
+    transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
+  }
+  .gal-item img.loaded {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
 
   /* Hover overlay */
   .gal-overlay {
@@ -842,14 +877,21 @@
       if (entry.isIntersecting) {
         const img = entry.target;
         if (img.dataset.src) {
-          img.src = img.dataset.src;
+          const src = img.dataset.src;
           img.removeAttribute('data-src');
-          img.classList.add('loaded');
+          img.src = src;
+          img.onload = () => {
+            img.classList.add('loaded');
+            img.parentElement.classList.add('img-loaded');
+          };
+          img.onerror = () => {
+            img.parentElement.classList.add('img-loaded');
+          };
         }
         lazyObserver.unobserve(img);
       }
     });
-  }, { rootMargin: '200px 0px' });
+  }, { rootMargin: '300px 0px' });
 
   // ── Build gallery items ──
   function buildGallery() {
@@ -861,9 +903,7 @@
       el.dataset.discipline = item.discipline;
       el.dataset.clients = (item.clients || []).join(',');
 
-      // Thumbnail path: swap images/ prefix for thumbnails/
       const thumbSrc = item.file.replace(/^images\//, 'thumbnails/');
-      // Full image path stays as-is for lightbox
       const fullSrc = item.file;
 
       const clientLabel = item.clients && item.clients.length
@@ -878,10 +918,8 @@
         </div>
       `;
 
-      // Store full image path for lightbox
       el.dataset.full = fullSrc;
 
-      // Observe image for lazy loading
       const img = el.querySelector('img');
       lazyObserver.observe(img);
 
@@ -895,32 +933,43 @@
   // ── Filter logic ──
   function filterGallery() {
     const items = grid.querySelectorAll('.gal-item');
-    const hasDisc = activeFilters.discipline.size > 0;
-    const hasClient = activeFilters.client.size > 0;
-    const hasAny = hasDisc || hasClient;
+    const selDisc = [...activeFilters.discipline];
+    const selClient = [...activeFilters.client];
+    const noFilters = selDisc.length === 0 && selClient.length === 0;
 
     visibleItems = [];
 
     items.forEach(el => {
       const index = parseInt(el.dataset.index);
       const item = manifest[index];
-      const itemClients = (item.clients || []);
+      const itemClients = item.clients || [];
       const itemDisc = item.discipline;
 
-      let show = true;
+      let show;
 
-      if (hasAny) {
-        // Within each type, OR always applies (item can only have one discipline)
-        const discMatch = activeFilters.discipline.has(itemDisc);
-        const clientMatch = itemClients.some(c => activeFilters.client.has(c));
+      if (noFilters) {
+        show = true;
+      } else if (filterLogic === 'or') {
+        // OR: show if item matches ANY selected filter from either type
+        const discHit = selDisc.length > 0 && selDisc.includes(itemDisc);
+        const clientHit = selClient.length > 0 && itemClients.some(c => selClient.includes(c));
 
-        if (filterLogic === 'and') {
-          // AND: must satisfy every type that has active filters
-          show = (!hasDisc || discMatch) && (!hasClient || clientMatch);
+        if (selDisc.length > 0 && selClient.length > 0) {
+          // Both types active — match either
+          show = discHit || clientHit;
+        } else if (selDisc.length > 0) {
+          // Only discipline filters — must match discipline
+          show = discHit;
         } else {
-          // OR: must satisfy at least one active filter across all types
-          show = (hasDisc && discMatch) || (hasClient && clientMatch);
+          // Only client filters — must match client
+          show = clientHit;
         }
+      } else {
+        // AND: must satisfy EVERY type that has active filters
+        // Within a type, OR applies (item can only be one discipline)
+        const discOk = selDisc.length === 0 || selDisc.includes(itemDisc);
+        const clientOk = selClient.length === 0 || itemClients.some(c => selClient.includes(c));
+        show = discOk && clientOk;
       }
 
       if (show) {
