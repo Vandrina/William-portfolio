@@ -389,41 +389,16 @@
   }
   .gal-item.hidden { display: none; }
 
-  /* Shimmer skeleton while loading */
-  .gal-item::before {
-    content: '';
-    display: block;
-    padding-top: 75%; /* 4:3 placeholder ratio */
-    background: linear-gradient(
-      90deg,
-      var(--surface) 0%,
-      var(--bg-3) 40%,
-      var(--surface) 80%
-    );
-    background-size: 200% 100%;
-    animation: shimmer 1.4s infinite;
-  }
-  .gal-item.img-loaded::before {
-    display: none;
-  }
-  @keyframes shimmer {
-    0%   { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-  }
-
-  /* Image blur-up */
+  /* Image blur-up — normal flow so card has height for columns */
   .gal-item img {
     display: block;
     width: 100%;
     height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
   }
   .gal-item img.lazy {
     opacity: 0;
-    filter: blur(12px);
-    transform: scale(1.04);
+    filter: blur(10px);
+    transform: scale(1.03);
     transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
   }
   .gal-item img.loaded {
