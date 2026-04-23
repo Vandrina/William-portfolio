@@ -1,191 +1,5 @@
 [
   {
-    "file": "images/backgrounds/1. AdAgency.SABI.ItzaZooGalleryScreen.jpg",
-    "discipline": "backgrounds",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/backgrounds/2. AdAgency.SABI.ZooMap.jpg",
-    "discipline": "backgrounds",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/backgrounds/3. TechSmartKids.WinterRunner.Portfolio.jpg",
-    "discipline": "backgrounds",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/backgrounds/4. AuthorDigital.GlampingCabins_Portfolio.jpg",
-    "discipline": "backgrounds",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/backgrounds/DreamboxLearning.Wallpapers_cabin.adj.jpg",
-    "discipline": "backgrounds",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/backgrounds/DreamboxLearning.Wallpapers_cardinals.adj.jpg",
-    "discipline": "backgrounds",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/backgrounds/DreamboxLearning.Wallpapers_fogmountains.adj.jpg",
-    "discipline": "backgrounds",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/backgrounds/DreamboxLearning.Wallpapers_koi.adj.jpg",
-    "discipline": "backgrounds",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/backgrounds/DreamboxLearning.Wallpapers_monsters.adj.jpg",
-    "discipline": "backgrounds",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/backgrounds/DreamboxLearning.Wallpapers_snowtree.adj.jpg",
-    "discipline": "backgrounds",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/backgrounds/DreamboxLearning.Wallpapers_ufo.adj.jpg",
-    "discipline": "backgrounds",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/backgrounds/DreamboxLearning.Wallpapers_windowplants.adj.jpg",
-    "discipline": "backgrounds",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/backgrounds/KnowWonder.Leapfrog.Background-Egypt.jpg",
-    "discipline": "backgrounds",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/backgrounds/KnowWonder.Leapfrog.Background-Venice.jpg",
-    "discipline": "backgrounds",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/books/ BuzzBeakerBooksTemplate.jpg",
-    "discipline": "books",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/books/001. StoneArchBooks.GrowingGooCover.jpg",
-    "discipline": "books",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/books/002. StoneArchBooks.GrowingGooPages.jpg",
-    "discipline": "books",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/books/003. StoneArchBooks.CaveCreaturesCover.jpg",
-    "discipline": "books",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/books/004. StoneArchBooks.CaveCreaturesPages.jpg",
-    "discipline": "books",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/books/005. StoneArchBooks.FastCarCover.jpg",
-    "discipline": "books",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/books/006. StoneArchBooks.FastCarPages.jpg",
-    "discipline": "books",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/books/007. StoneArchBooks.RaceToSchoolCover.jpg",
-    "discipline": "books",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/books/008. StoneArchBooks.RaceToSchoolPages.jpg",
-    "discipline": "books",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/books/009. StoneArchBooks.CoolCapCover.jpg",
-    "discipline": "books",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/books/010. StoneArchBooks.CoolCapPages.jpg",
-    "discipline": "books",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/books/011. StoneArchBooks.SpeedSecretCover.jpg",
-    "discipline": "books",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/books/012. StoneArchBooks.SpeedSecretPages.jpg",
-    "discipline": "books",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/books/013. StoneArchBooks.PuttPuttCover.jpg",
-    "discipline": "books",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/books/014. StoneArchBooks.PuttPuttPages.jpg",
-    "discipline": "books",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/books/015. StoneArchBooks.SpaceTripCover.jpg",
-    "discipline": "books",
-    "clients": [],
-    "keywords": []
-  },
-  {
-    "file": "images/books/016. StoneArchBooks.SpaceTripPages.jpg",
-    "discipline": "books",
-    "clients": [],
-    "keywords": []
-  },
-  {
     "file": "images/concept-art/1. Bigfish.SquinionsCharSheet.jpg",
     "discipline": "concept-art",
     "clients": [],
@@ -708,6 +522,12 @@
     "keywords": []
   },
   {
+    "file": "images/concept-art/CaptainPike.jpg",
+    "discipline": "concept-art",
+    "clients": [],
+    "keywords": []
+  },
+  {
     "file": "images/concept-art/MysterySociety_Clowns_Portfolio.jpg",
     "discipline": "concept-art",
     "clients": [],
@@ -745,6 +565,60 @@
   },
   {
     "file": "images/concept-art/PitchAgency.Shmoranges_Portfolio1.jpg",
+    "discipline": "concept-art",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/concept-art/Trek_vulcan_female_hair.jpg",
+    "discipline": "concept-art",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/concept-art/Trek_vulcan_male_hair.jpg",
+    "discipline": "concept-art",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/concept-art/VulcanEngineer.jpg",
+    "discipline": "concept-art",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/concept-art/VulcanEngineer_hair.jpg",
+    "discipline": "concept-art",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/concept-art/VulcanEngineerpose.jpg",
+    "discipline": "concept-art",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/concept-art/bodytypes_female.jpg",
+    "discipline": "concept-art",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/concept-art/bodytypes_male.jpg",
+    "discipline": "concept-art",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/concept-art/headtypes_female.jpg",
+    "discipline": "concept-art",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/concept-art/headtypes_male.jpg",
     "discipline": "concept-art",
     "clients": [],
     "keywords": []
@@ -1022,6 +896,192 @@
   {
     "file": "images/illustration/MysterySociety.Icons_Portfolio.jpg",
     "discipline": "illustration",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/backgrounds/1. AdAgency.SABI.ItzaZooGalleryScreen.jpg",
+    "discipline": "backgrounds",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/backgrounds/2. AdAgency.SABI.ZooMap.jpg",
+    "discipline": "backgrounds",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/backgrounds/3. TechSmartKids.WinterRunner.Portfolio.jpg",
+    "discipline": "backgrounds",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/backgrounds/4. AuthorDigital.GlampingCabins_Portfolio.jpg",
+    "discipline": "backgrounds",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/backgrounds/DreamboxLearning.Wallpapers_cabin.adj.jpg",
+    "discipline": "backgrounds",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/backgrounds/DreamboxLearning.Wallpapers_cardinals.adj.jpg",
+    "discipline": "backgrounds",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/backgrounds/DreamboxLearning.Wallpapers_fogmountains.adj.jpg",
+    "discipline": "backgrounds",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/backgrounds/DreamboxLearning.Wallpapers_koi.adj.jpg",
+    "discipline": "backgrounds",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/backgrounds/DreamboxLearning.Wallpapers_monsters.adj.jpg",
+    "discipline": "backgrounds",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/backgrounds/DreamboxLearning.Wallpapers_snowtree.adj.jpg",
+    "discipline": "backgrounds",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/backgrounds/DreamboxLearning.Wallpapers_ufo.adj.jpg",
+    "discipline": "backgrounds",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/backgrounds/DreamboxLearning.Wallpapers_windowplants.adj.jpg",
+    "discipline": "backgrounds",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/backgrounds/KnowWonder.Leapfrog.Background-Egypt.jpg",
+    "discipline": "backgrounds",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/backgrounds/KnowWonder.Leapfrog.Background-Venice.jpg",
+    "discipline": "backgrounds",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/books/ BuzzBeakerBooksTemplate.jpg",
+    "discipline": "books",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/books/001. StoneArchBooks.GrowingGooCover.jpg",
+    "discipline": "books",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/books/002. StoneArchBooks.GrowingGooPages.jpg",
+    "discipline": "books",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/books/003. StoneArchBooks.CaveCreaturesCover.jpg",
+    "discipline": "books",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/books/004. StoneArchBooks.CaveCreaturesPages.jpg",
+    "discipline": "books",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/books/005. StoneArchBooks.FastCarCover.jpg",
+    "discipline": "books",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/books/006. StoneArchBooks.FastCarPages.jpg",
+    "discipline": "books",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/books/007. StoneArchBooks.RaceToSchoolCover.jpg",
+    "discipline": "books",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/books/008. StoneArchBooks.RaceToSchoolPages.jpg",
+    "discipline": "books",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/books/009. StoneArchBooks.CoolCapCover.jpg",
+    "discipline": "books",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/books/010. StoneArchBooks.CoolCapPages.jpg",
+    "discipline": "books",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/books/011. StoneArchBooks.SpeedSecretCover.jpg",
+    "discipline": "books",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/books/012. StoneArchBooks.SpeedSecretPages.jpg",
+    "discipline": "books",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/books/013. StoneArchBooks.PuttPuttCover.jpg",
+    "discipline": "books",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/books/014. StoneArchBooks.PuttPuttPages.jpg",
+    "discipline": "books",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/books/015. StoneArchBooks.SpaceTripCover.jpg",
+    "discipline": "books",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/books/016. StoneArchBooks.SpaceTripPages.jpg",
+    "discipline": "books",
     "clients": [],
     "keywords": []
   },
@@ -1730,6 +1790,276 @@
   {
     "file": "images/toy-design/120. HE\u0301LIO CASTRONEVES.png",
     "discipline": "toy-design",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/mashup/CATDOG-BEAVERS.BarryWinslow.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/mashup/CATDOG-BEAVERS.CatBarry.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/mashup/CATDOG-BEAVERS.CatBing.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/mashup/CATDOG-BEAVERS.DogBing.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/mashup/CATDOG-BEAVERS.DogNorbert.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/mashup/CATDOG-BEAVERS.ShriekNorbert.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/mashup/CATDOG-BEAVERS.ShriekTruckee.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/mashup/CATDOG-BEAVERS.WinslowDaggett.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/mashup/CATDOG-BEAVERS.WinslowTruckee.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/mashup/ZIM-MONSTERS.AlienZickis.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/mashup/ZIM-MONSTERS.DogGerkis.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/mashup/ZIM-MONSTERS.Dromble.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/mashup/ZIM-MONSTERS.HumanZizzle.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/mashup/ZIM-MONSTERS.HumanZoblina.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/mashup/ZIM-MONSTERS.HumanZromble.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/mashup/ZIM-MONSTERS.RobotGerkis.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/mashup/ZIM-MONSTERS.RobotGrumm.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/mashup/ZIM-MONSTERS.TheSnorb.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/onesheet/BEAVERS.BarryBear.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/onesheet/BEAVERS.Bing.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/onesheet/BEAVERS.Daggett.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/onesheet/BEAVERS.Norbert.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/onesheet/BEAVERS.Treeflower.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/onesheet/BEAVERS.Truckee.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/onesheet/Monsters.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/onesheet/ZIM.AlienZim.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/onesheet/ZIM.Dib.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/onesheet/ZIM.DogGir.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/onesheet/ZIM.Gaz.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/onesheet/ZIM.HumanZim.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/onesheet/ZIM.RobotGir.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/costume/BabyZim.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/costume/BattleDib.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/costume/BolognaZim.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/costume/BoyCostumeGir.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/costume/CapturedZim.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/costume/CatGir.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/costume/GermfighterZim.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/costume/OldManZim.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/costume/OrganStealerZim.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/costume/ProjectorGir.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/costume/SuperheroDib.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/costume/TeddybearZim.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/costume/WeaponFormGir.jpg",
+    "discipline": "nft",
+    "clients": [],
+    "keywords": []
+  },
+  {
+    "file": "images/nft/costume/Zim_Molt.jpg",
+    "discipline": "nft",
     "clients": [],
     "keywords": []
   }
