@@ -3,7 +3,7 @@
    Shared across all pages
    ═══════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500&family=Space+Mono:wght@400;700&display=swap');
+/* Fonts loaded via <link> tags in each HTML page for non-blocking render */
 
 /* ── Variables ── */
 :root {

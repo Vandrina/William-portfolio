@@ -6,9 +6,10 @@
 <title>About — William McGuire</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500&family=Space+Mono:wght@400;700&display=optional">
 <link rel="stylesheet" href="style.css">
 <style>
-  .about-wrap { padding: 64px 32px; }
+  .about-wrap { padding: 64px 32px 80px; }
   .about-inner { max-width: 820px; margin: 0 auto; }
 
   .about-header {
@@ -28,7 +29,6 @@
     font-family: var(--font-body); font-size: 14px; color: var(--mid);
   }
 
-  /* Float image left, text wraps */
   .about-img {
     float: left;
     width: 220px;
@@ -39,8 +39,7 @@
   }
   .about-img img { display: block; width: 100%; height: auto; }
   .about-img-placeholder {
-    width: 100%;
-    aspect-ratio: 3/4;
+    width: 100%; aspect-ratio: 3/4;
     display: flex; align-items: center; justify-content: center;
     background: var(--bg-3);
     font-family: var(--font-mono); font-size: 10px;
@@ -63,18 +62,11 @@
     background: var(--accent-dim);
     margin: 2px 0 18px;
   }
-
   .about-clear { clear: both; }
 
   @media (max-width: 600px) {
-    .about-wrap { padding: 40px 20px; }
-    .about-img {
-      float: none;
-      width: 100%;
-      max-width: 240px;
-      margin: 0 auto 28px;
-      display: block;
-    }
+    .about-wrap { padding: 40px 20px 60px; }
+    .about-img { float: none; width: 100%; max-width: 240px; margin: 0 auto 28px; display: block; }
     .about-name { font-size: 28px; }
   }
 </style>
@@ -91,7 +83,7 @@
       <a href="portfolio.html" class="nav-item">Portfolio</a>
       <a href="about.html" class="nav-item active">About</a>
       <a href="contact.html" class="nav-item">Contact</a>
-      <a href="https://williammcguire.shop" class="nav-shop nav-item">↗ Shop</a>
+      <a href="shop.html" class="nav-shop nav-item">↗ Shop</a>
     </div>
   </nav>
 </div>
@@ -105,7 +97,7 @@
       <div class="about-title">Illustrator · Concept Artist · Animator</div>
     </div>
 
-    <!-- Replace placeholder with: <img src="images/william-mcguire.jpg" alt="William McGuire"> -->
+    <!-- Replace with: <img src="images/william-mcguire.jpg" alt="William McGuire"> -->
     <div class="about-img">
       <div class="about-img-placeholder">Photo</div>
     </div>
@@ -140,7 +132,7 @@
       <a href="portfolio.html" class="footer-link">Portfolio</a>
       <a href="about.html" class="footer-link">About</a>
       <a href="contact.html" class="footer-link">Contact</a>
-      <a href="https://williammcguire.shop" class="footer-link gold">↗ Shop</a>
+      <a href="shop.html" class="footer-link gold">↗ Shop</a>
     </div>
   </div>
 </footer>

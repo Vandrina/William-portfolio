@@ -6,6 +6,7 @@
 <title>Portfolio — William McGuire</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500&family=Space+Mono:wght@400;700&display=optional">
 <link rel="stylesheet" href="style.css">
 <style>
   .filter-wrap {
@@ -192,31 +193,23 @@
   }
   .gal-item.hidden { display: none; }
 
-  .gal-item .img-wrap {
-    position: relative;
-    overflow: hidden;
-    display: block;
-    line-height: 0;
-  }
-  .gal-item .img-placeholder {
+  /* Single image with blur-up on load */
+  .gal-item img {
     display: block;
     width: 100%;
     height: auto;
-    filter: blur(12px);
-    transform: scale(1.05);
-    transition: opacity 0.4s ease;
   }
-  .gal-item .img-main {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .gal-item img.lazy {
     opacity: 0;
-    transition: opacity 0.5s ease;
+    filter: blur(8px);
+    transform: scale(1.02);
+    transition: opacity 0.4s ease, filter 0.4s ease, transform 0.4s ease;
   }
-  .gal-item .img-main.loaded { opacity: 1; }
-  .gal-item.img-ready .img-placeholder { opacity: 0; }
+  .gal-item img.loaded {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
 
   .gal-overlay {
     position: absolute;
@@ -469,19 +462,18 @@
   const lightboxDiscipline = document.getElementById('lightboxDiscipline');
   const lightboxClient     = document.getElementById('lightboxClient');
 
-  // ── Lazy loading: observe the card, not the image ──
+  // ── Lazy loading ──
   const lazyObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      const card = entry.target;
-      const mainImg = card.querySelector('.img-main');
-      if (mainImg && mainImg.dataset.src) {
-        mainImg.src = mainImg.dataset.src;
-        mainImg.removeAttribute('data-src');
-        mainImg.onload  = () => { mainImg.classList.add('loaded'); card.classList.add('img-ready'); };
-        mainImg.onerror = () => { card.classList.add('img-ready'); };
+      const img = entry.target;
+      if (img.dataset.src) {
+        img.src = img.dataset.src;
+        img.removeAttribute('data-src');
+        img.onload  = () => img.classList.add('loaded');
+        img.onerror = () => img.classList.add('loaded');
       }
-      lazyObserver.unobserve(card);
+      lazyObserver.unobserve(img);
     });
   }, { rootMargin: '400px 0px' });
 
@@ -495,13 +487,8 @@
       manifest = data;
 
       /* Display order — uncomment one to use:
-
-      // Randomized on each page load:
       // manifest.sort(() => Math.random() - 0.5);
-
-      // By "sort" number in manifest (add "sort": 1 to manifest entries):
       // manifest.sort((a, b) => (a.sort || 999) - (b.sort || 999));
-
       */
 
       totalCount.textContent = manifest.length;
@@ -511,8 +498,8 @@
     })
     .catch(err => {
       console.error('Manifest load failed:', err);
-      emptyState.querySelector('.gallery-empty-title').textContent = 'Could not load portfolio.';
-      emptyState.querySelector('.gallery-empty-desc').textContent = 'Please try refreshing the page.';
+      emptyState.querySelector('#galleryEmptyTitle').textContent = 'Could not load portfolio.';
+      emptyState.querySelector('#galleryEmptyDesc').textContent = 'Please try refreshing the page.';
       emptyState.classList.add('visible');
     });
 
@@ -525,26 +512,22 @@
       el.dataset.index     = index;
       el.dataset.discipline = item.discipline;
       el.dataset.clients   = (item.clients || []).join(',');
+      el.dataset.full      = item.file;
 
-      const thumbSrc = item.file.replace(/^images\//, 'thumbnails/');
-      const blurSrc  = item.file.replace(/^images\//, 'gallery-blur-placeholders/');
-      el.dataset.full = item.file;
-
+      const thumbSrc    = item.file.replace(/^images\//, 'thumbnails/');
       const clientLabel = (item.clients || []).map(c => formatLabel(c)).join(', ');
 
       el.innerHTML = `
-        <div class="img-wrap">
-          <img class="img-placeholder" src="${blurSrc}" alt="" aria-hidden="true">
-          <img class="img-main" data-src="${thumbSrc}"
-               alt="${formatLabel(item.discipline)}${clientLabel ? ' — ' + clientLabel : ''}">
-        </div>
+        <img class="lazy" data-src="${thumbSrc}"
+             alt="${formatLabel(item.discipline)}${clientLabel ? ' — ' + clientLabel : ''}">
         <div class="gal-overlay">
           <div class="gal-overlay-discipline">${formatLabel(item.discipline)}</div>
           ${clientLabel ? `<div class="gal-overlay-client">${clientLabel}</div>` : ''}
         </div>
       `;
 
-      lazyObserver.observe(el);
+      const img = el.querySelector('img');
+      lazyObserver.observe(img);
       el.addEventListener('click', () => openLightbox(index));
       grid.appendChild(el);
     });
