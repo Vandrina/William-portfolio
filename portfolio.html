@@ -8,6 +8,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500&family=Space+Mono:wght@400;700&display=optional">
 <link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<!-- GoatCounter analytics - replace ACCOUNT with your goatcounter account name -->
+<!-- <script data-goatcounter="https://ACCOUNT.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
 <style>
   .filter-wrap {
     background: var(--bg);
@@ -90,7 +93,7 @@
   .gal-item {
     break-inside: avoid; margin-bottom: 12px; border-radius: var(--radius); overflow: hidden;
     border: 1px solid var(--border); position: relative; cursor: pointer; display: block;
-    background: var(--surface); transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    background: var(--surface); transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
   }
   .gal-item:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.45); border-color: var(--border-mid); }
   .gal-item.hidden { display: none; }
@@ -265,13 +268,17 @@
     <div class="footer-tagline">Illustrator · Concept Artist · Animator</div>
   </div>
   <div class="footer-base">
-    <div class="footer-copy">© william mcguire — williammcguire.net</div>
+    <div class="footer-left">
+      <div class="footer-copy">© william mcguire — williammcguire.net</div>
+      <div class="footer-legal">
+        <a href="privacy.html" class="footer-legal-link">Privacy</a>
+        <a href="terms.html" class="footer-legal-link">Terms</a>
+      </div>
+    </div>
     <div class="footer-links">
       <a href="portfolio.html" class="footer-link">Portfolio</a>
       <a href="about.html" class="footer-link">About</a>
       <a href="contact.html" class="footer-link">Contact</a>
-      <a href="privacy.html" class="footer-link">Privacy</a>
-      <a href="terms.html" class="footer-link">Terms</a>
       <a href="shop.html" class="footer-link gold">Shop ↗</a>
     </div>
   </div>
@@ -313,20 +320,24 @@
   var lightboxDiscipline = document.getElementById('lightboxDiscipline');
   var lightboxClient     = document.getElementById('lightboxClient');
 
-  // Lazy load — reduced rootMargin so blur is visible during scroll
+  // Lazy load — negative rootMargin means image starts loading when it enters viewport
+  // This ensures blur is visible briefly before the full image arrives
   var lazyObserver = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (!entry.isIntersecting) return;
       var img = entry.target;
       if (img.dataset.src) {
-        img.src = img.dataset.src;
-        img.removeAttribute('data-src');
-        img.onload  = function() { img.classList.add('loaded'); };
-        img.onerror = function() { img.classList.add('loaded'); };
+        // Small delay so blur state is visible
+        setTimeout(function() {
+          img.src = img.dataset.src;
+          img.removeAttribute('data-src');
+          img.onload  = function() { img.classList.add('loaded'); };
+          img.onerror = function() { img.classList.add('loaded'); };
+        }, 100);
       }
       lazyObserver.unobserve(img);
     });
-  }, { rootMargin: '100px 0px' }); // reduced from 400px so blur is visible
+  }, { rootMargin: '50px 0px' }); // small positive margin — loads just before visible
 
   // Load manifest
   fetch('./data/manifest.json')
