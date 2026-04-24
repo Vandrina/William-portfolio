@@ -18,150 +18,63 @@
     z-index: 90;
   }
   .filter-inner { max-width: var(--max); margin: 0 auto; }
-  .filter-groups {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 12px;
-    align-items: start;
-  }
+  .filter-groups { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: start; }
   .filter-left { display: flex; flex-direction: column; gap: 10px; }
-  .filter-group {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 6px;
-  }
+  .filter-group { display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 6px; }
   .filter-group-label {
-    font-family: var(--font-head);
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--bright);
-    margin-right: 2px;
-    flex-shrink: 0;
+    font-family: var(--font-head); font-size: 15px; font-weight: 600;
+    color: var(--bright); margin-right: 2px; flex-shrink: 0;
   }
   .filter-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    padding: 5px 11px;
-    font-family: var(--font-body);
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--text);
-    background: transparent;
-    border: 1px solid var(--mid);
-    border-radius: var(--radius);
-    cursor: pointer;
-    transition: border-color 0.2s, color 0.2s, background 0.2s;
-    user-select: none;
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 5px 11px; font-family: var(--font-body); font-size: 12px; font-weight: 500;
+    color: var(--text); background: transparent; border: 1px solid var(--mid);
+    border-radius: var(--radius); cursor: pointer;
+    transition: border-color 0.2s, color 0.2s, background 0.2s; user-select: none;
   }
   .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
-  .filter-btn.active {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: rgba(200,164,110,0.08);
-  }
+  .filter-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(200,164,110,0.08); }
   .filter-btn.active::after { content: '✓'; font-size: 10px; opacity: 0.8; }
   .filter-all-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    padding-left: 12px;
-    border-left: 1px solid var(--border);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    padding-left: 12px; border-left: 1px solid var(--border);
   }
   .filter-btn-all {
-    padding: 8px 16px;
-    font-family: var(--font-head);
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text);
-    background: transparent;
-    border: 1px solid var(--muted);
-    border-radius: var(--radius);
-    cursor: pointer;
-    transition: border-color 0.2s, color 0.2s;
-    white-space: nowrap;
+    padding: 8px 16px; font-family: var(--font-head); font-size: 13px; font-weight: 600;
+    color: var(--text); background: transparent; border: 1px solid var(--muted);
+    border-radius: var(--radius); cursor: pointer; transition: border-color 0.2s, color 0.2s; white-space: nowrap;
   }
-  .filter-btn-all:hover,
-  .filter-btn-all.active { border-color: var(--accent); color: var(--accent); }
+  .filter-btn-all:hover, .filter-btn-all.active { border-color: var(--accent); color: var(--accent); }
   .logic-toggle {
-    display: flex;
-    border: 1px solid var(--border-mid);
-    border-radius: var(--radius);
-    overflow: hidden;
-    background: var(--surface);
+    display: flex; border: 1px solid var(--border-mid);
+    border-radius: var(--radius); overflow: hidden; background: var(--surface);
   }
   .logic-btn {
-    padding: 5px 10px;
-    font-family: var(--font-mono);
-    font-size: 10px;
-    font-weight: 700;
-    color: var(--muted);
-    background: var(--surface);
-    border: none;
-    cursor: pointer;
-    transition: color 0.2s, background 0.2s;
-    letter-spacing: 0.05em;
+    padding: 5px 10px; font-family: var(--font-mono); font-size: 10px; font-weight: 700;
+    color: var(--muted); background: var(--surface); border: none; cursor: pointer;
+    transition: color 0.2s, background 0.2s; letter-spacing: 0.05em;
   }
   .logic-btn.active { color: var(--accent); background: var(--bg-3); }
-  .active-summary {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
-  .active-summary-label {
-    font-family: var(--font-mono);
-    font-size: 9px;
-    color: var(--muted);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
+  .active-summary { margin-top: 10px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .active-summary-label { font-family: var(--font-mono); font-size: 9px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
   .active-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    padding: 3px 8px;
-    font-family: var(--font-body);
-    font-size: 11px;
-    color: var(--accent);
-    border: 1px solid var(--accent-dim);
-    border-radius: 3px;
-    background: rgba(200,164,110,0.06);
+    display: inline-flex; align-items: center; gap: 5px; padding: 3px 8px;
+    font-family: var(--font-body); font-size: 11px; color: var(--accent);
+    border: 1px solid var(--accent-dim); border-radius: 3px; background: rgba(200,164,110,0.06);
   }
   .active-tag-remove { cursor: pointer; opacity: 0.6; font-size: 12px; transition: opacity 0.2s; }
   .active-tag-remove:hover { opacity: 1; }
   .clear-btn {
-    padding: 3px 8px;
-    font-family: var(--font-mono);
-    font-size: 9px;
-    color: var(--muted);
-    background: transparent;
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    cursor: pointer;
-    letter-spacing: 0.08em;
-    transition: color 0.2s, border-color 0.2s;
+    padding: 3px 8px; font-family: var(--font-mono); font-size: 9px; color: var(--muted);
+    background: transparent; border: 1px solid var(--border); border-radius: 3px; cursor: pointer;
+    letter-spacing: 0.08em; transition: color 0.2s, border-color 0.2s;
   }
   .clear-btn:hover { color: var(--text); border-color: var(--border-mid); }
   .filter-mobile-toggle {
-    display: none;
-    width: 100%;
-    padding: 10px 16px;
-    font-family: var(--font-head);
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text);
-    background: var(--surface);
-    border: 1px solid var(--border-mid);
-    border-radius: var(--radius);
-    cursor: pointer;
-    justify-content: space-between;
-    align-items: center;
-    transition: border-color 0.2s;
+    display: none; width: 100%; padding: 10px 16px; font-family: var(--font-head);
+    font-size: 13px; font-weight: 600; color: var(--text); background: var(--surface);
+    border: 1px solid var(--border-mid); border-radius: var(--radius); cursor: pointer;
+    justify-content: space-between; align-items: center; transition: border-color 0.2s;
   }
   .filter-mobile-toggle:hover { border-color: var(--accent); }
 
@@ -175,121 +88,44 @@
   .gallery-grid { columns: 4; column-gap: 12px; }
 
   .gal-item {
-    break-inside: avoid;
-    margin-bottom: 12px;
-    border-radius: var(--radius);
-    overflow: hidden;
-    border: 1px solid var(--border);
-    position: relative;
-    cursor: pointer;
-    display: block;
-    background: var(--surface);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    break-inside: avoid; margin-bottom: 12px; border-radius: var(--radius); overflow: hidden;
+    border: 1px solid var(--border); position: relative; cursor: pointer; display: block;
+    background: var(--surface); transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   }
-  .gal-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(0,0,0,0.45);
-    border-color: var(--border-mid);
-  }
+  .gal-item:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.45); border-color: var(--border-mid); }
   .gal-item.hidden { display: none; }
-
-  /* Single image with blur-up on load */
-  .gal-item img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
+  .gal-item img { display: block; width: 100%; height: auto; }
   .gal-item img.lazy {
-    opacity: 0;
-    filter: blur(8px);
-    transform: scale(1.02);
-    transition: opacity 0.4s ease, filter 0.4s ease, transform 0.4s ease;
+    opacity: 0; filter: blur(8px); transform: scale(1.02);
+    transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease;
   }
-  .gal-item img.loaded {
-    opacity: 1;
-    filter: blur(0);
-    transform: scale(1);
-  }
+  .gal-item img.loaded { opacity: 1; filter: blur(0); transform: scale(1); }
 
   .gal-overlay {
-    position: absolute;
-    inset: 0;
+    position: absolute; inset: 0; z-index: 2;
     background: linear-gradient(to top, rgba(10,10,12,0.88) 0%, rgba(10,10,12,0.2) 50%, transparent 100%);
-    opacity: 0;
-    transition: opacity 0.25s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 14px;
-    z-index: 2;
+    opacity: 0; transition: opacity 0.25s ease;
+    display: flex; flex-direction: column; justify-content: flex-end; padding: 14px;
   }
   .gal-item:hover .gal-overlay { opacity: 1; }
-  .gal-overlay-discipline {
-    font-family: var(--font-mono);
-    font-size: 9px;
-    color: var(--accent);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 3px;
-  }
-  .gal-overlay-client {
-    font-family: var(--font-head);
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--bright);
-  }
+  .gal-overlay-discipline { font-family: var(--font-mono); font-size: 9px; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 3px; }
+  .gal-overlay-client { font-family: var(--font-head); font-size: 13px; font-weight: 600; color: var(--bright); }
 
   .gallery-empty { display: none; padding: 80px 32px; text-align: center; }
   .gallery-empty.visible { display: block; }
   .gallery-empty-title { font-family: var(--font-head); font-size: 18px; font-weight: 600; color: var(--mid); margin-bottom: 8px; }
   .gallery-empty-desc { font-family: var(--font-body); font-size: 13px; color: var(--muted); }
 
-  .lightbox {
-    position: fixed; inset: 0;
-    background: rgba(10,10,12,0.94);
-    z-index: 1000;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 32px;
-  }
+  .lightbox { position: fixed; inset: 0; background: rgba(10,10,12,0.94); z-index: 1000; display: none; align-items: center; justify-content: center; padding: 32px; }
   .lightbox.open { display: flex; }
-  .lightbox-inner {
-    position: relative;
-    max-width: 90vw;
-    max-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-  .lightbox-img {
-    max-width: 100%;
-    max-height: 80vh;
-    object-fit: contain;
-    border-radius: var(--radius);
-    box-shadow: 0 32px 80px rgba(0,0,0,0.7);
-  }
+  .lightbox-inner { position: relative; max-width: 90vw; max-height: 90vh; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .lightbox-img { max-width: 100%; max-height: 80vh; object-fit: contain; border-radius: var(--radius); box-shadow: 0 32px 80px rgba(0,0,0,0.7); }
   .lightbox-meta { display: flex; gap: 12px; align-items: center; }
   .lightbox-discipline { font-family: var(--font-mono); font-size: 9px; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; }
   .lightbox-client { font-family: var(--font-head); font-size: 14px; font-weight: 600; color: var(--bright); }
-  .lightbox-close {
-    position: fixed; top: 24px; right: 24px;
-    width: 40px; height: 40px;
-    background: var(--surface); border: 1px solid var(--border-mid); border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer; color: var(--mid); font-size: 18px;
-    transition: color 0.2s, border-color 0.2s; z-index: 1001;
-  }
+  .lightbox-close { position: fixed; top: 24px; right: 24px; width: 40px; height: 40px; background: var(--surface); border: 1px solid var(--border-mid); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--mid); font-size: 18px; transition: color 0.2s, border-color 0.2s; z-index: 1001; }
   .lightbox-close:hover { color: var(--bright); border-color: var(--mid); }
-  .lightbox-nav {
-    position: fixed; top: 50%; transform: translateY(-50%);
-    width: 44px; height: 44px;
-    background: rgba(20,20,22,0.75); border: 1px solid var(--border-mid); border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    cursor: pointer; color: var(--mid); font-size: 18px;
-    transition: color 0.2s, background 0.2s; z-index: 1001;
-  }
+  .lightbox-nav { position: fixed; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; background: rgba(20,20,22,0.75); border: 1px solid var(--border-mid); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--mid); font-size: 18px; transition: color 0.2s, background 0.2s; z-index: 1001; }
   .lightbox-nav:hover { color: var(--bright); background: rgba(20,20,22,0.95); }
   .lightbox-prev { left: 24px; }
   .lightbox-next { right: 24px; }
@@ -304,14 +140,7 @@
     .filter-groups { display: none; }
     .filter-groups.mobile-open { display: grid; margin-top: 12px; }
     .filter-groups { grid-template-columns: 1fr; }
-    .filter-all-wrap {
-      flex-direction: row;
-      border-left: none;
-      border-top: 1px solid var(--border);
-      padding-left: 0;
-      padding-top: 10px;
-      justify-content: flex-start;
-    }
+    .filter-all-wrap { flex-direction: row; border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 10px; justify-content: flex-start; }
   }
   @media (max-width: 480px) { .gallery-grid { columns: 1; } }
 </style>
@@ -328,9 +157,18 @@
       <a href="portfolio.html" class="nav-item active">Portfolio</a>
       <a href="about.html" class="nav-item">About</a>
       <a href="contact.html" class="nav-item">Contact</a>
-      <a href="https://williammcguire.shop" class="nav-shop nav-item">↗ Shop</a>
+      <a href="shop.html" class="nav-shop nav-item">Shop ↗</a>
     </div>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+</div>
+<div class="nav-mobile-menu" id="navMobileMenu">
+  <a href="portfolio.html" class="active">Portfolio</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="shop.html" class="shop">Shop ↗</a>
 </div>
 
 <div class="page-head">
@@ -344,8 +182,7 @@
 <div class="filter-wrap">
   <div class="filter-inner">
     <button class="filter-mobile-toggle" id="filterToggle">
-      <span>Filter</span>
-      <span id="filterToggleIcon">↓</span>
+      <span>Filter</span><span id="filterToggleIcon">↓</span>
     </button>
     <div class="filter-groups" id="filterGroups">
       <div class="filter-left">
@@ -433,7 +270,9 @@
       <a href="portfolio.html" class="footer-link">Portfolio</a>
       <a href="about.html" class="footer-link">About</a>
       <a href="contact.html" class="footer-link">Contact</a>
-      <a href="https://williammcguire.shop" class="footer-link gold">↗ Shop</a>
+      <a href="privacy.html" class="footer-link">Privacy</a>
+      <a href="terms.html" class="footer-link">Terms</a>
+      <a href="shop.html" class="footer-link gold">Shop ↗</a>
     </div>
   </div>
 </footer>
@@ -442,136 +281,139 @@
 (function() {
   'use strict';
 
-  let manifest = [];
-  let activeFilters = { discipline: new Set(), client: new Set() };
-  let filterLogic = 'or';
-  let visibleItems = [];
-  let lightboxIndex = 0;
+  // Hamburger
+  var hbtn = document.getElementById('navHamburger');
+  var hmenu = document.getElementById('navMobileMenu');
+  if (hbtn && hmenu) {
+    hbtn.addEventListener('click', function() { hmenu.classList.toggle('open'); });
+    document.addEventListener('click', function(e) {
+      if (!hbtn.contains(e.target) && !hmenu.contains(e.target)) hmenu.classList.remove('open');
+    });
+  }
 
-  const grid          = document.getElementById('galleryGrid');
-  const emptyState    = document.getElementById('galleryEmpty');
-  const visibleCount  = document.getElementById('visibleCount');
-  const totalCount    = document.getElementById('totalCount');
-  const activeSummary = document.getElementById('activeSummary');
-  const activeTags    = document.getElementById('activeTags');
-  const filterToggle  = document.getElementById('filterToggle');
-  const filterToggleIcon = document.getElementById('filterToggleIcon');
-  const filterGroups  = document.getElementById('filterGroups');
-  const lightbox      = document.getElementById('lightbox');
-  const lightboxImg   = document.getElementById('lightboxImg');
-  const lightboxDiscipline = document.getElementById('lightboxDiscipline');
-  const lightboxClient     = document.getElementById('lightboxClient');
+  var manifest = [];
+  var activeFilters = { discipline: new Set(), client: new Set() };
+  var filterLogic = 'or';
+  var visibleItems = [];
+  var lightboxIndex = 0;
 
-  // ── Lazy loading ──
-  const lazyObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+  var grid          = document.getElementById('galleryGrid');
+  var emptyState    = document.getElementById('galleryEmpty');
+  var emptyTitle    = document.getElementById('galleryEmptyTitle');
+  var emptyDesc     = document.getElementById('galleryEmptyDesc');
+  var visibleCount  = document.getElementById('visibleCount');
+  var totalCount    = document.getElementById('totalCount');
+  var activeSummary = document.getElementById('activeSummary');
+  var activeTags    = document.getElementById('activeTags');
+  var filterToggle  = document.getElementById('filterToggle');
+  var filterToggleIcon = document.getElementById('filterToggleIcon');
+  var filterGroups  = document.getElementById('filterGroups');
+  var lightbox      = document.getElementById('lightbox');
+  var lightboxImg   = document.getElementById('lightboxImg');
+  var lightboxDiscipline = document.getElementById('lightboxDiscipline');
+  var lightboxClient     = document.getElementById('lightboxClient');
+
+  // Lazy load — reduced rootMargin so blur is visible during scroll
+  var lazyObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
       if (!entry.isIntersecting) return;
-      const img = entry.target;
+      var img = entry.target;
       if (img.dataset.src) {
         img.src = img.dataset.src;
         img.removeAttribute('data-src');
-        img.onload  = () => img.classList.add('loaded');
-        img.onerror = () => img.classList.add('loaded');
+        img.onload  = function() { img.classList.add('loaded'); };
+        img.onerror = function() { img.classList.add('loaded'); };
       }
       lazyObserver.unobserve(img);
     });
-  }, { rootMargin: '400px 0px' });
+  }, { rootMargin: '100px 0px' }); // reduced from 400px so blur is visible
 
-  // ── Load manifest ──
+  // Load manifest
   fetch('./data/manifest.json')
-    .then(r => {
-      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    .then(function(r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
       return r.json();
     })
-    .then(data => {
+    .then(function(data) {
       manifest = data;
 
-      /* Display order — uncomment one to use:
-      // manifest.sort(() => Math.random() - 0.5);
-      // manifest.sort((a, b) => (a.sort || 999) - (b.sort || 999));
+      /* Display order — uncomment one:
+      // manifest.sort(function() { return Math.random() - 0.5; });
+      // manifest.sort(function(a,b) { return (a.sort||999)-(b.sort||999); });
       */
 
       totalCount.textContent = manifest.length;
       buildGallery(true);
       readUrlParams();
-      requestAnimationFrame(() => filterGallery());
+      requestAnimationFrame(function() { filterGallery(); });
     })
-    .catch(err => {
+    .catch(function(err) {
       console.error('Manifest load failed:', err);
-      emptyState.querySelector('#galleryEmptyTitle').textContent = 'Could not load portfolio.';
-      emptyState.querySelector('#galleryEmptyDesc').textContent = 'Please try refreshing the page.';
+      emptyTitle.textContent = 'Could not load portfolio.';
+      emptyDesc.textContent  = 'Please try refreshing the page.';
       emptyState.classList.add('visible');
     });
 
-  // ── Build gallery ──
   function buildGallery(skipFilter) {
     grid.innerHTML = '';
-    manifest.forEach((item, index) => {
-      const el = document.createElement('div');
+    manifest.forEach(function(item, index) {
+      var el = document.createElement('div');
       el.className = 'gal-item';
-      el.dataset.index     = index;
+      el.dataset.index      = index;
       el.dataset.discipline = item.discipline;
-      el.dataset.clients   = (item.clients || []).join(',');
-      el.dataset.full      = item.file;
+      el.dataset.clients    = (item.clients || []).join(',');
+      el.dataset.full       = item.file;
 
-      const thumbSrc    = item.file.replace(/^images\//, 'thumbnails/');
-      const clientLabel = (item.clients || []).map(c => formatLabel(c)).join(', ');
+      // Thumbnail path — mirrors images/ folder under thumbnails/
+      var thumbSrc    = item.file.replace(/^images\//, 'thumbnails/');
+      var clientLabel = (item.clients || []).map(formatLabel).join(', ');
 
-      el.innerHTML = `
-        <img class="lazy" data-src="${thumbSrc}"
-             alt="${formatLabel(item.discipline)}${clientLabel ? ' — ' + clientLabel : ''}">
-        <div class="gal-overlay">
-          <div class="gal-overlay-discipline">${formatLabel(item.discipline)}</div>
-          ${clientLabel ? `<div class="gal-overlay-client">${clientLabel}</div>` : ''}
-        </div>
-      `;
+      el.innerHTML =
+        '<img class="lazy" data-src="' + thumbSrc + '" alt="' + formatLabel(item.discipline) + (clientLabel ? ' — ' + clientLabel : '') + '">' +
+        '<div class="gal-overlay">' +
+          '<div class="gal-overlay-discipline">' + formatLabel(item.discipline) + '</div>' +
+          (clientLabel ? '<div class="gal-overlay-client">' + clientLabel + '</div>' : '') +
+        '</div>';
 
-      const img = el.querySelector('img');
+      var img = el.querySelector('img');
       lazyObserver.observe(img);
-      el.addEventListener('click', () => openLightbox(index));
+      el.addEventListener('click', (function(i) { return function() { openLightbox(i); }; })(index));
       grid.appendChild(el);
     });
-
     if (!skipFilter) filterGallery();
   }
 
-  // ── Filter logic ──
   function filterGallery() {
-    const items     = grid.querySelectorAll('.gal-item');
-    const selDisc   = [...activeFilters.discipline];
-    const selClient = [...activeFilters.client];
-    const noFilters = selDisc.length === 0 && selClient.length === 0;
+    var items     = grid.querySelectorAll('.gal-item');
+    var selDisc   = Array.from(activeFilters.discipline);
+    var selClient = Array.from(activeFilters.client);
+    var noFilters = selDisc.length === 0 && selClient.length === 0;
 
-    // Detect same-type AND conflict:
-    // AND across two disciplines or two clients is logically impossible
-    // (an image can only have one discipline; AND requires matching ALL)
-    const sameTypeConflict = filterLogic === 'and' && (
+    var sameTypeConflict = filterLogic === 'and' && (
       (selDisc.length > 1 && selClient.length === 0) ||
       (selClient.length > 1 && selDisc.length === 0)
     );
 
     visibleItems = [];
 
-    items.forEach(el => {
-      const index      = parseInt(el.dataset.index);
-      const item       = manifest[index];
-      const itemDisc   = item.discipline;
-      const itemClients = item.clients || [];
-      let show;
+    items.forEach(function(el) {
+      var index       = parseInt(el.dataset.index);
+      var item        = manifest[index];
+      var itemDisc    = item.discipline;
+      var itemClients = item.clients || [];
+      var show;
 
       if (noFilters) {
         show = true;
       } else if (sameTypeConflict) {
-        // AND across same type = impossible, show nothing
         show = false;
       } else if (filterLogic === 'or') {
-        const discHit   = selDisc.length > 0   && selDisc.includes(itemDisc);
-        const clientHit = selClient.length > 0 && itemClients.some(c => selClient.includes(c));
+        var discHit   = selDisc.length > 0   && selDisc.indexOf(itemDisc) !== -1;
+        var clientHit = selClient.length > 0 && itemClients.some(function(c) { return selClient.indexOf(c) !== -1; });
         show = discHit || clientHit;
       } else {
-        // AND across types: item must satisfy each type that has selections
-        const discOk   = selDisc.length === 0   || selDisc.includes(itemDisc);
-        const clientOk = selClient.length === 0  || itemClients.some(c => selClient.includes(c));
+        var discOk   = selDisc.length === 0   || selDisc.indexOf(itemDisc) !== -1;
+        var clientOk = selClient.length === 0  || itemClients.some(function(c) { return selClient.indexOf(c) !== -1; });
         show = discOk && clientOk;
       }
 
@@ -581,11 +423,8 @@
 
     visibleCount.textContent = visibleItems.length;
 
-    // Update empty state message
-    const emptyTitle = document.getElementById('galleryEmptyTitle');
-    const emptyDesc  = document.getElementById('galleryEmptyDesc');
     if (sameTypeConflict) {
-      emptyTitle.textContent = 'AND logic applies across disciplines and clients.';
+      emptyTitle.textContent = 'AND works across disciplines and clients.';
       emptyDesc.textContent  = selDisc.length > 1
         ? 'Select one discipline, then add a client filter to narrow results.'
         : 'Select one client, then add a discipline filter to narrow results.';
@@ -599,20 +438,16 @@
     updateUrl();
   }
 
-  // ── Filter buttons ──
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const type  = btn.dataset.type;
-      const value = btn.dataset.value;
+  document.querySelectorAll('.filter-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var type  = btn.dataset.type;
+      var value = btn.dataset.value;
       if (activeFilters[type].has(value)) {
-        activeFilters[type].delete(value);
-        btn.classList.remove('active');
+        activeFilters[type].delete(value); btn.classList.remove('active');
       } else {
-        activeFilters[type].add(value);
-        btn.classList.add('active');
+        activeFilters[type].add(value); btn.classList.add('active');
       }
-      updateAllButton();
-      filterGallery();
+      updateAllButton(); filterGallery();
     });
   });
 
@@ -620,95 +455,81 @@
   document.getElementById('clearAll').addEventListener('click', clearAllFilters);
 
   function clearAllFilters() {
-    activeFilters.discipline.clear();
-    activeFilters.client.clear();
-    document.querySelectorAll('.filter-btn.active').forEach(b => b.classList.remove('active'));
-    updateAllButton();
-    filterGallery();
+    activeFilters.discipline.clear(); activeFilters.client.clear();
+    document.querySelectorAll('.filter-btn.active').forEach(function(b) { b.classList.remove('active'); });
+    updateAllButton(); filterGallery();
   }
 
   function updateAllButton() {
-    const hasAny = activeFilters.discipline.size > 0 || activeFilters.client.size > 0;
+    var hasAny = activeFilters.discipline.size > 0 || activeFilters.client.size > 0;
     document.getElementById('filterAll').classList.toggle('active', !hasAny);
   }
 
-  // ── Logic toggle ──
-  document.querySelectorAll('.logic-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
+  document.querySelectorAll('.logic-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
       filterLogic = btn.dataset.logic;
-      document.querySelectorAll('.logic-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      filterGallery();
+      document.querySelectorAll('.logic-btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active'); filterGallery();
     });
   });
 
-  // ── Mobile toggle ──
-  filterToggle.addEventListener('click', () => {
-    const open = filterGroups.classList.toggle('mobile-open');
+  filterToggle.addEventListener('click', function() {
+    var open = filterGroups.classList.toggle('mobile-open');
     filterToggleIcon.textContent = open ? '↑' : '↓';
   });
 
-  // ── Active summary ──
   function updateActiveSummary() {
-    const hasAny = activeFilters.discipline.size > 0 || activeFilters.client.size > 0;
+    var hasAny = activeFilters.discipline.size > 0 || activeFilters.client.size > 0;
     activeSummary.style.display = hasAny ? 'flex' : 'none';
     activeTags.innerHTML = '';
-    [...activeFilters.discipline].forEach(v => activeTags.appendChild(makeTag(v, 'discipline')));
-    [...activeFilters.client].forEach(v => activeTags.appendChild(makeTag(v, 'client')));
+    Array.from(activeFilters.discipline).forEach(function(v) { activeTags.appendChild(makeTag(v, 'discipline')); });
+    Array.from(activeFilters.client).forEach(function(v) { activeTags.appendChild(makeTag(v, 'client')); });
   }
 
   function makeTag(value, type) {
-    const tag = document.createElement('div');
+    var tag = document.createElement('div');
     tag.className = 'active-tag';
-    tag.innerHTML = `${formatLabel(value)} <span class="active-tag-remove">×</span>`;
-    tag.querySelector('.active-tag-remove').addEventListener('click', () => {
+    tag.innerHTML = formatLabel(value) + ' <span class="active-tag-remove">×</span>';
+    tag.querySelector('.active-tag-remove').addEventListener('click', function() {
       activeFilters[type].delete(value);
-      const btn = document.querySelector(`.filter-btn[data-type="${type}"][data-value="${value}"]`);
+      var btn = document.querySelector('.filter-btn[data-type="' + type + '"][data-value="' + value + '"]');
       if (btn) btn.classList.remove('active');
-      updateAllButton();
-      filterGallery();
+      updateAllButton(); filterGallery();
     });
     return tag;
   }
 
-  // ── URL params ──
   function updateUrl() {
-    const params = new URLSearchParams();
-    if (activeFilters.discipline.size > 0) params.set('view',   [...activeFilters.discipline].join(','));
-    if (activeFilters.client.size > 0)     params.set('client', [...activeFilters.client].join(','));
-    const newUrl = params.toString()
-      ? `${window.location.pathname}?${params.toString()}`
-      : window.location.pathname;
+    var params = new URLSearchParams();
+    if (activeFilters.discipline.size > 0) params.set('view',   Array.from(activeFilters.discipline).join(','));
+    if (activeFilters.client.size > 0)     params.set('client', Array.from(activeFilters.client).join(','));
+    var newUrl = params.toString() ? window.location.pathname + '?' + params.toString() : window.location.pathname;
     window.history.replaceState({}, '', newUrl);
   }
 
   function readUrlParams() {
-    const params = new URLSearchParams(window.location.search);
-    const view   = params.get('view');
-    const client = params.get('client');
-
+    var params = new URLSearchParams(window.location.search);
+    var view   = params.get('view');
+    var client = params.get('client');
     if (view) {
-      view.split(',').forEach(v => {
-        v = v.trim().toLowerCase();
-        if (!v) return;
+      view.split(',').forEach(function(v) {
+        v = v.trim().toLowerCase(); if (!v) return;
         activeFilters.discipline.add(v);
-        const btn = document.querySelector(`.filter-btn[data-type="discipline"][data-value="${v}"]`);
+        var btn = document.querySelector('.filter-btn[data-type="discipline"][data-value="' + v + '"]');
         if (btn) btn.classList.add('active');
       });
     }
     if (client) {
-      client.split(',').forEach(c => {
-        c = c.trim().toLowerCase();
-        if (!c) return;
+      client.split(',').forEach(function(c) {
+        c = c.trim().toLowerCase(); if (!c) return;
         activeFilters.client.add(c);
-        const btn = document.querySelector(`.filter-btn[data-type="client"][data-value="${c}"]`);
+        var btn = document.querySelector('.filter-btn[data-type="client"][data-value="' + c + '"]');
         if (btn) btn.classList.add('active');
       });
     }
     if (view || client) updateAllButton();
   }
 
-  // ── Lightbox ──
   function openLightbox(index) {
     lightboxIndex = visibleItems.indexOf(index);
     if (lightboxIndex === -1) lightboxIndex = 0;
@@ -718,13 +539,13 @@
   }
 
   function showLightboxItem() {
-    const index = visibleItems[lightboxIndex];
-    const item  = manifest[index];
-    const el    = grid.querySelector(`.gal-item[data-index="${index}"]`);
+    var index = visibleItems[lightboxIndex];
+    var item  = manifest[index];
+    var el    = grid.querySelector('.gal-item[data-index="' + index + '"]');
     lightboxImg.src = el ? el.dataset.full : item.file;
     lightboxImg.alt = formatLabel(item.discipline);
     lightboxDiscipline.textContent = formatLabel(item.discipline);
-    lightboxClient.textContent = (item.clients || []).map(c => formatLabel(c)).join(', ');
+    lightboxClient.textContent = (item.clients || []).map(formatLabel).join(', ');
   }
 
   function closeLightbox() {
@@ -734,25 +555,23 @@
   }
 
   document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
-  document.getElementById('lightboxPrev').addEventListener('click', () => {
-    lightboxIndex = (lightboxIndex - 1 + visibleItems.length) % visibleItems.length;
-    showLightboxItem();
+  lightbox.addEventListener('click', function(e) { if (e.target === lightbox) closeLightbox(); });
+  document.getElementById('lightboxPrev').addEventListener('click', function() {
+    lightboxIndex = (lightboxIndex - 1 + visibleItems.length) % visibleItems.length; showLightboxItem();
   });
-  document.getElementById('lightboxNext').addEventListener('click', () => {
-    lightboxIndex = (lightboxIndex + 1) % visibleItems.length;
-    showLightboxItem();
+  document.getElementById('lightboxNext').addEventListener('click', function() {
+    lightboxIndex = (lightboxIndex + 1) % visibleItems.length; showLightboxItem();
   });
-  document.addEventListener('keydown', e => {
+  document.addEventListener('keydown', function(e) {
     if (!lightbox.classList.contains('open')) return;
-    if (e.key === 'Escape')      closeLightbox();
+    if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowLeft')  { lightboxIndex = (lightboxIndex - 1 + visibleItems.length) % visibleItems.length; showLightboxItem(); }
     if (e.key === 'ArrowRight') { lightboxIndex = (lightboxIndex + 1) % visibleItems.length; showLightboxItem(); }
   });
 
   function formatLabel(slug) {
     if (!slug) return '';
-    return slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    return slug.split('-').map(function(w) { return w.charAt(0).toUpperCase() + w.slice(1); }).join(' ');
   }
 
 })();
