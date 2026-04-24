@@ -379,12 +379,15 @@
       el.dataset.discipline = item.discipline;
       el.dataset.clients    = (item.clients || []).join(',');
       el.dataset.full       = item.file;
+      if (item.thumbAspectRatio || item.aspectRatio) {
+        el.style.aspectRatio = item.thumbAspectRatio || item.aspectRatio;
+      }
 
-      var thumbSrc    = item.file.replace(/^images\//, 'thumbnails/');
+      var thumbSrc    = item.thumbnail || item.file.replace(/^images\//, 'thumbnails/');
       var clientLabel = (item.clients || []).map(formatLabel).join(', ');
 
       el.innerHTML =
-        '<img data-src="' + thumbSrc + '" alt="' + formatLabel(item.discipline) + (clientLabel ? ' — ' + clientLabel : '') + '">' +
+        '<img data-src="' + thumbSrc + '" width="' + (item.thumbWidth || 1) + '" height="' + (item.thumbHeight || 1) + '" alt="' + formatLabel(item.discipline) + (clientLabel ? ' — ' + clientLabel : '') + '">' +
         '<div class="gal-overlay">' +
           '<div class="gal-overlay-discipline">' + formatLabel(item.discipline) + '</div>' +
           (clientLabel ? '<div class="gal-overlay-client">' + clientLabel + '</div>' : '') +
