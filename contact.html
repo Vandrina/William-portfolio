@@ -9,8 +9,12 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500&family=Space+Mono:wght@400;700&display=optional">
 <link rel="stylesheet" href="style.css">
 <style>
-  .contact-wrap { padding: 64px 32px 80px; }
-  .contact-inner { max-width: 560px; margin: 0 auto; }
+  html, body { height: 100%; }
+  body { display: flex; flex-direction: column; }
+  .contact-wrap { flex: 1; padding: 64px 32px; }
+  .footer { margin-top: auto; }
+
+  .contact-inner { max-width: 640px; margin: 0 auto; }
 
   .contact-eyebrow {
     font-family: var(--font-mono); font-size: 9px;
@@ -29,55 +33,59 @@
   .contact-methods {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
   .contact-method {
     display: flex;
     align-items: center;
-    gap: 14px;
-    padding: 14px 18px;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px 24px;
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: var(--radius);
     text-decoration: none;
-    width: fit-content;
-    min-width: 320px;
+    width: 100%;
     transition: border-color 0.2s, background 0.2s;
   }
   .contact-method:hover { border-color: var(--accent-dim); background: var(--bg-3); }
+
   .contact-method-icon {
-    width: 32px; height: 32px;
+    width: 42px; height: 42px;
     display: flex; align-items: center; justify-content: center;
     color: var(--accent);
     border: 1px solid var(--accent-dim);
     border-radius: 4px;
     flex-shrink: 0;
     font-family: var(--font-mono);
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 700;
+  }
+  .contact-method-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
   }
   .contact-method-label {
     font-family: var(--font-mono); font-size: 9px;
     color: var(--muted); letter-spacing: 0.12em;
-    text-transform: uppercase; margin-bottom: 2px;
+    text-transform: uppercase; margin-bottom: 3px;
   }
   .contact-method-value {
-    font-family: var(--font-head); font-size: 13px;
+    font-family: var(--font-head); font-size: 14px;
     font-weight: 600; color: var(--bright);
   }
 
   .contact-note {
     font-family: var(--font-body); font-size: 13px;
     color: var(--muted); line-height: 1.7;
-    max-width: 400px;
   }
 
   @media (max-width: 768px) {
-    .contact-wrap { padding: 40px 20px 60px; }
+    .contact-wrap { padding: 40px 20px; }
     .contact-title { font-size: 28px; }
-    .contact-method { min-width: 0; width: 100%; }
   }
 </style>
 </head>
@@ -112,7 +120,7 @@
 
       <a href="mailto:nwillustrator@yahoo.com" class="contact-method">
         <div class="contact-method-icon">✉</div>
-        <div>
+        <div class="contact-method-text">
           <div class="contact-method-label">Email</div>
           <div class="contact-method-value">nwillustrator@yahoo.com</div>
         </div>
@@ -120,7 +128,7 @@
 
       <a href="https://instagram.com/bill.mcguire" target="_blank" class="contact-method">
         <div class="contact-method-icon">◎</div>
-        <div>
+        <div class="contact-method-text">
           <div class="contact-method-label">Instagram</div>
           <div class="contact-method-value">@bill.mcguire</div>
         </div>
@@ -128,7 +136,7 @@
 
       <a href="https://linkedin.com/in/billmcguire" target="_blank" class="contact-method">
         <div class="contact-method-icon">in</div>
-        <div>
+        <div class="contact-method-text">
           <div class="contact-method-label">LinkedIn</div>
           <div class="contact-method-value">linkedin.com/in/billmcguire</div>
         </div>
