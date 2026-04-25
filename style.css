@@ -721,15 +721,16 @@ body {
 /* ── DISCIPLINE CARDS ── */
 .disc-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+  justify-content: center;
 }
 .disc-card {
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--border);
   position: relative;
-  min-height: 172px;
+  aspect-ratio: 414/255;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -776,13 +777,14 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
+  justify-content: center;
 }
 .client-card {
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid var(--border);
   position: relative;
-  min-height: 112px;
+  aspect-ratio: 330/168;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -871,8 +873,7 @@ body {
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .gallery-grid { columns: 3; }
-  .disc-grid { grid-template-columns: repeat(4, 1fr); }
-  .client-grid { grid-template-columns: repeat(4, 1fr); }
+  
 }
 @media (max-width: 768px) {
   .nav-wrap {
@@ -934,13 +935,13 @@ body {
     justify-content: flex-start;
   }
   .disc-grid { grid-template-columns: repeat(2, 1fr); }
-  .client-grid { grid-template-columns: repeat(2, 1fr); }
+  .client-grid { grid-template-columns: repeat(3, 1fr); }
   .hero-inner { height: 300px; }
   .dev-notes-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
   .gallery-grid { columns: 1; }
   .page-title { font-size: 24px; }
-  .disc-grid { grid-template-columns: repeat(2, 1fr); }
-  .client-grid { grid-template-columns: repeat(2, 1fr); }
+  .disc-grid { grid-template-columns: repeat(1, 1fr); }
+  .client-grid { grid-template-columns: repeat(1, 1fr); }
 }
