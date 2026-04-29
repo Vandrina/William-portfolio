@@ -17,10 +17,11 @@
     display: flex;
     flex-direction: row;
     gap: 32px;
-    height: 232px;
+    height: auto;
     max-width: 640px;
-    margin: 0 auto 16px;
+    margin: 0 auto;
     justify-content: center;
+    align-items: center;
   }
   .contact-wrap {
   display: flex;
@@ -34,28 +35,66 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+    height: 450px;
+    padding: 20px 0;
+    justify-content: space-between;
   }
   .contact-method {
     display: flex; align-items: center; justify-content: flex-start; gap: 14px;
     padding: 14px 20px; background: var(--surface);
-    border: 1px solid var(--border); border-radius: var(--radius);
+    border: 1px solid var(--accent-dim); border-radius: var(--radius);
     text-decoration: none; width: 100%;
-    transition: border-color 0.2s, background 0.2s;
+    transition: border-color 0.2s;
   }
-  .contact-method:hover { border-color: var(--accent-dim); background: var(--bg-3); }
+  .contact-method:hover { 
+    background: var(--bg-3); }
+
+  .contact-method:hover .contact-method-icon img {
+  opacity: 1;
+}
+  
   .contact-method-icon {
     width: 42px; height: 42px; flex-shrink: 0;
     display: flex; align-items: center; justify-content: center;
     color: var(--accent); border: 1px solid var(--accent-dim);
-    border-radius: 4px; font-family: var(--font-mono); font-size: 16px; font-weight: 700;
+    border-radius: 4px; font-family: var(--font-mono); font-size: 20px; font-weight: 700; position:relative;
   }
+
+  .contact-method-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(79%) sepia(12%) saturate(1189%) hue-rotate(359deg) brightness(92%) contrast(83%);
+    position: absolute;
+    opacity: 0.7;
+    transitioin: opacity 0.2s;
+  }
+
+  .icon-glyph {
+    font-size: 36px;
+    line-height: 5;
+    display: flex;
+   align-items: center;
+    justify-content: center;
+    padding: 0 0 7px 2px;
+  }
+
+  .contact-method-icon img + * {
+    display: none;
+  }
+
+  .contact-method-icon:has(img[src=""]) *:not(img),
+  .contact-method-icon img[alt] {
+    display: flex;
+  }
+
   .contact-method-text { display: flex; flex-direction: column; align-items: flex-start; }
   .contact-method-label { font-family: var(--font-mono); font-size: 9px; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 3px; }
   .contact-method-value { font-family: var(--font-head); font-size: 13px; font-weight: 600; color: var(--bright); }
 
   /* Container: just a positioner, no bg or border */
   .contact-img {
-    height: 100%;
+    max-height: 450px;
     display: flex;
     align-items: center;
     flex-shrink: 0;
@@ -63,7 +102,7 @@
   /* Border and radius on the img itself so they hug the image with no gap */
   .contact-img img {
     display: block;
-    height: 100%;
+    max-height: 450px;
     width: auto;
     aspect-ratio: 3/4;
     border: 1px solid var(--border);
@@ -75,25 +114,16 @@
     body { padding-top: 72px; }
     .contact-cols {
       flex-direction: column;
-      height: auto;
-      width: 100%;
-      align-items: center;
       margin-bottom: 16px;
     }
-    .contact-methods { width: 100%; }
-    .contact-img {
-      width: 60%;
-      height: auto;
-    }
+    .contact-methods { width: auto; }
+  
     .contact-img img {
-      height: auto;
+      height: 100%;
       width: 100%;
     }
   }
-
-  @media (max-width: 480px) {
-    .contact-img { width: 80%; }
-  }
+  
 </style>
 </head>
 <body>
@@ -132,21 +162,28 @@
 
       <div class="contact-methods">
         <a href="mailto:nwillustrator@yahoo.com" class="contact-method">
-          <div class="contact-method-icon">✉</div>
+          <div class="contact-method-icon"><img src="page-images/contact/Icons/mail.png" alt=""><span class="icon-glyph">✉</span></div>
           <div class="contact-method-text">
             <div class="contact-method-label">Email</div>
             <div class="contact-method-value">nwillustrator@yahoo.com</div>
           </div>
         </a>
         <a href="https://linkedin.com/in/billmcguire" target="_blank" class="contact-method">
-          <div class="contact-method-icon">in</div>
+          <div class="contact-method-icon"><img src="page-images/contact/Icons/linkedin.png" alt=""><span class="icon-glyph">in</span></div>
           <div class="contact-method-text">
             <div class="contact-method-label">LinkedIn</div>
             <div class="contact-method-value">linkedin.com/in/billmcguire</div>
           </div>
         </a>
+        <a href="tel:206-434-5401" class="contact-method">
+          <div class="contact-method-icon"><img src="page-images/contact/Icons/phone.png" alt=""><span class="icon-glyph">✆</span></div>
+          <div class="contact-method-text">
+            <div class="contact-method-label">Phone</div>
+            <div class="contact-method-value">206-434-5401</div>
+          </div>
+        </a>
         <a href="https://instagram.com/bill.mcguire" target="_blank" class="contact-method">
-          <div class="contact-method-icon">◎</div>
+          <div class="contact-method-icon"><img src="page-images/contact/Icons/inst.png" alt=""><span class="icon-glyph">◎</span></div>
           <div class="contact-method-text">
             <div class="contact-method-label">Instagram</div>
             <div class="contact-method-value">@bill.mcguire</div>
