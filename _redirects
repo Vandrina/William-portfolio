@@ -1,0 +1,28 @@
+# Cloudflare Pages Redirects
+# Clean URLs for William McGuire Portfolio
+# Place this file in the root of your repository
+
+# Discipline filters
+/illustration           /gallery.html?discipline=illustration          302
+/concept-art            /gallery.html?discipline=concept-art           302
+/toy-design             /gallery.html?discipline=toy-design            302
+/backgrounds            /gallery.html?discipline=backgrounds           302
+/books                  /gallery.html?discipline=books                 302
+/nfts                   /gallery.html?discipline=nfts                  302
+
+# Client filters
+/microsoft              /gallery.html?client=microsoft                 302
+/amazon                 /gallery.html?client=amazon                    302
+/big-fish               /gallery.html?client=big-fish                  302
+/elevated-games         /gallery.html?client=elevated-games            302
+/reflective-games       /gallery.html?client=reflective-games          302
+/dreambox-learning      /gallery.html?client=dreambox-learning         302
+/leapfrog               /gallery.html?client=leapfrog                  302
+/paramount              /gallery.html?client=paramount                 302
+/handmade-by-robots     /gallery.html?client=handmade-by-robots        302
+/mystery-society        /gallery.html?client=mystery-society           302
+/nordstrom              /gallery.html?client=nordstrom                 302
+/nickelodeon            /gallery.html?client=nickelodeon               302
+/stone-arch-books       /gallery.html?client=stone-arch-books          302
+/tech-smart-kids        /gallery.html?client=tech-smart-kids           302
+/agency                 /gallery.html?client=agency                    302
