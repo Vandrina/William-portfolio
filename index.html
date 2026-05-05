@@ -46,32 +46,40 @@
 
   </div>
 
-  <!-- HERO GALLERY — lighter bg-2 -->
-  <div class="hero-wrap">
-    <div class="hero-inner" id="heroInner">
-      <div class="hero-slide active hero-slide-1"><img src="page-images/index/hero-horizontal/HeroGallery1.jpg" alt="">
-      </div>
-      <div class="hero-slide hero-slide-2"><img src="page-images/index/hero-horizontal/HeroGallery3.jpg" alt=""></div>
-      <div class="hero-slide hero-slide-3"><img src="page-images/index/hero-horizontal/HeroGallery2.jpg" alt=""></div>
-      <div class="hero-slide active hero-slide-4"><img src="page-images/index/hero-horizontal/HeroGallery5.jpg" alt="">
-      </div>
-      <div class="hero-slide hero-slide-5"><img src="page-images/index/hero-horizontal/HeroGallery10.jpg" alt=""></div>
-      <div class="hero-slide hero-slide-6"><img src="page-images/index/hero-horizontal/HeroGallery6.jpg" alt=""></div>
-      <!-- hero counter disabled <div class="hero-counter" id="heroCounter">1 / 3</div> -->
-      <div class="hero-arrows">
-        <button class="hero-arrow" id="heroPrev">‹</button>
-        <button class="hero-arrow" id="heroNext">›</button>
-      </div>
-      <div class="hero-dots" id="heroDots">
-        <div class="hero-dot active" data-index="0"></div>
-        <div class="hero-dot" data-index="1"></div>
-        <div class="hero-dot" data-index="2"></div>
-        <div class="hero-dot" data-index="3"></div>
-        <div class="hero-dot" data-index="4"></div>
-        <div class="hero-dot" data-index="5"></div>
-      </div>
+<!-- HERO GALLERY — lighter bg-2 -->
+<div class="hero-wrap">
+  <div class="hero-inner" id="heroInner">
+    <div class="hero-track" id="heroTrack">
+      <!-- Clone of last slide for infinite loop -->
+      <div class="hero-slide hero-slide-6 hero-clone" data-index="-1"><img src="page-images/index/hero-horizontal/HeroGallery6.jpg" alt=""></div>
+      
+      <!-- Real slides -->
+      <div class="hero-slide hero-slide-1" data-index="0"><img src="page-images/index/hero-horizontal/HeroGallery1.jpg" alt=""></div>
+      <div class="hero-slide hero-slide-2" data-index="1"><img src="page-images/index/hero-horizontal/HeroGallery3.jpg" alt=""></div>
+      <div class="hero-slide hero-slide-3" data-index="2"><img src="page-images/index/hero-horizontal/HeroGallery2.jpg" alt=""></div>
+      <div class="hero-slide hero-slide-4" data-index="3"><img src="page-images/index/hero-horizontal/HeroGallery5.jpg" alt=""></div>
+      <div class="hero-slide hero-slide-5" data-index="4"><img src="page-images/index/hero-horizontal/HeroGallery10.jpg" alt=""></div>
+      <div class="hero-slide hero-slide-6" data-index="5"><img src="page-images/index/hero-horizontal/HeroGallery6.jpg" alt=""></div>
+      
+      <!-- Clone of first slide for infinite loop -->
+      <div class="hero-slide hero-slide-1 hero-clone" data-index="6"><img src="page-images/index/hero-horizontal/HeroGallery1.jpg" alt=""></div>
     </div>
   </div>
+  <div class="hero-controls">
+    <div class="hero-arrows">
+      <button class="hero-arrow" id="heroPrev">‹</button>
+      <button class="hero-arrow" id="heroNext">›</button>
+    </div>
+    <div class="hero-dots" id="heroDots">
+      <div class="hero-dot" data-index="0"></div>
+      <div class="hero-dot" data-index="1"></div>
+      <div class="hero-dot" data-index="2"></div>
+      <div class="hero-dot" data-index="3"></div>
+      <div class="hero-dot" data-index="4"></div>
+      <div class="hero-dot" data-index="5"></div>
+    </div>
+  </div>
+</div>
 
   <!-- DISCIPLINES — darker base bg -->
   <div class="section section-disc">
@@ -241,34 +249,151 @@
 
 
 <script>
-    (function () {
-      // Hamburger
-      var btn = document.getElementById('navHamburger');
-      var menu = document.getElementById('navMobileMenu');
-      if (btn && menu) {
-        btn.addEventListener('click', function () { menu.classList.toggle('open'); });
-        document.addEventListener('click', function (e) {
-          if (!btn.contains(e.target) && !menu.contains(e.target)) menu.classList.remove('open');
-        });
+  (function () {
+    // Hamburger
+    var btn = document.getElementById('navHamburger');
+    var menu = document.getElementById('navMobileMenu');
+    if (btn && menu) {
+      btn.addEventListener('click', function () { menu.classList.toggle('open'); });
+      document.addEventListener('click', function (e) {
+        if (!btn.contains(e.target) && !menu.contains(e.target)) menu.classList.remove('open');
+      });
+    }
+    
+    // Hero Carousel
+    var track = document.getElementById('heroTrack');
+    var allSlides = document.querySelectorAll('.hero-slide');
+    var dots = document.querySelectorAll('.hero-dot');
+    var realSlideCount = 6;
+    var current = 1;
+    var timer;
+    var slideWidth = 960;
+    var gap = 12;
+    var isTransitioning = false;
+    
+    function updateSlideWidth() {
+      if (allSlides[0]) {
+        slideWidth = allSlides[0].offsetWidth;
       }
-      // Hero
-      var slides = document.querySelectorAll('.hero-slide');
-      var dots = document.querySelectorAll('.hero-dot');
-      /* var counter = document.getElementById('heroCounter'); */
-      var current = 0, timer;
-      function goTo(i) {
-        slides[current].classList.remove('active'); dots[current].classList.remove('active');
-        current = (i + slides.length) % slides.length;
-        slides[current].classList.add('active'); dots[current].classList.add('active');
-        /* counter.textContent = (current + 1) + ' / ' + slides.length; */
+      // Update gap based on screen size
+      if (window.innerWidth <= 480) {
+        gap = 6;
+      } else if (window.innerWidth <= 768) {
+        gap = 8;
+      } else {
+        gap = 12;
       }
-      function startTimer() { clearInterval(timer); timer = setInterval(function () { goTo(current + 1); }, 5000); }
-      document.getElementById('heroPrev').addEventListener('click', function () { goTo(current - 1); startTimer(); });
-      document.getElementById('heroNext').addEventListener('click', function () { goTo(current + 1); startTimer(); });
-      dots.forEach(function (d) { d.addEventListener('click', function () { goTo(parseInt(d.dataset.index)); startTimer(); }); });
+    }
+    
+    function updatePosition(index, animate) {
+      if (animate) {
+        track.style.transition = 'transform 0.8s cubic-bezier(0.45, 0.05, 0.55, 0.95)';
+      } else {
+        track.style.transition = 'none';
+      }
+      
+      // Account for gap in offset calculation
+      var offset = -(index * (slideWidth + gap) + slideWidth / 2);
+      track.style.transform = 'translateX(' + offset + 'px)';
+    }
+    
+    function updateActiveStates(realIndex) {
+      allSlides.forEach(function(slide, index) {
+        var slideRealIndex = parseInt(slide.dataset.index);
+        slide.classList.toggle('active', slideRealIndex === realIndex);
+      });
+      
+      dots.forEach(function(dot, index) {
+        dot.classList.toggle('active', index === realIndex);
+      });
+    }
+    
+    function goTo(direction) {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      
+      if (direction === 'next') {
+        current++;
+        updatePosition(current, true);
+        
+        if (current === realSlideCount + 1) {
+          setTimeout(function() {
+            current = 1;
+            updatePosition(current, false);
+            updateActiveStates(0);
+            setTimeout(function() { isTransitioning = false; }, 50);
+          }, 800);
+          updateActiveStates(0);
+        } else {
+          updateActiveStates(current - 1);
+          setTimeout(function() { isTransitioning = false; }, 800);
+        }
+      } else {
+        current--;
+        updatePosition(current, true);
+        
+        if (current === 0) {
+          setTimeout(function() {
+            current = realSlideCount;
+            updatePosition(current, false);
+            updateActiveStates(realSlideCount - 1);
+            setTimeout(function() { isTransitioning = false; }, 50);
+          }, 800);
+          updateActiveStates(realSlideCount - 1);
+        } else {
+          updateActiveStates(current - 1);
+          setTimeout(function() { isTransitioning = false; }, 800);
+        }
+      }
+    }
+    
+    function goToDirect(realIndex) {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      
+      current = realIndex + 1;
+      updatePosition(current, true);
+      updateActiveStates(realIndex);
+      setTimeout(function() { isTransitioning = false; }, 800);
+    }
+    
+    function startTimer() {
+      clearInterval(timer);
+      timer = setInterval(function () {
+        goTo('next');
+      }, 4000);
+    }
+    
+    // Event listeners
+    document.getElementById('heroPrev').addEventListener('click', function () {
+      goTo('prev');
       startTimer();
-    })();
-  </script>
+    });
+    
+    document.getElementById('heroNext').addEventListener('click', function () {
+      goTo('next');
+      startTimer();
+    });
+    
+    dots.forEach(function (d, index) {
+      d.addEventListener('click', function () {
+        goToDirect(index);
+        startTimer();
+      });
+    });
+    
+    window.addEventListener('resize', function() {
+      updateSlideWidth();
+      updatePosition(current, false);
+    });
+    
+    // Initialize
+    updateSlideWidth();
+    updatePosition(current, false);
+    updateActiveStates(0);
+    startTimer();
+  })();
+</script>
 </body>
 
 </html>
