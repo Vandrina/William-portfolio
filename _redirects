@@ -3,12 +3,12 @@
 # Place this file in the root of your repository
 
 # Discipline filters
-/illustration           /gallery.html?discipline=illustration          302
-/concept-art            /gallery.html?discipline=concept-art           302
-/toy-design             /gallery.html?discipline=toy-design            302
-/backgrounds            /gallery.html?discipline=backgrounds           302
-/books                  /gallery.html?discipline=books                 302
-/nfts                   /gallery.html?discipline=nfts                  302
+/illustration           /gallery.html?view=illustration                302
+/concept-art            /gallery.html?view=concept-art                 302
+/toy-design             /gallery.html?view=toy-design                  302
+/backgrounds            /gallery.html?view=backgrounds                 302
+/books                  /gallery.html?view=books                       302
+/nfts                   /gallery.html?view=nfts                        302
 
 # Client filters
 /microsoft              /gallery.html?client=microsoft                 302
