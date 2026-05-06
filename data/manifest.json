@@ -6910,7 +6910,7 @@
   {
     "file": "images/concept-art/MysterySociety_ShipLayouts_Portfolio1.jpg",
     "thumbnail": "thumbnails/concept-art/MysterySociety_ShipLayouts_Portfolio1_thumbnail.jpg",
-    "placeholder": null,
+    "placeholder": "gallery-blur-placeholders/concept-art/mysterysociety_shiplayouts_portfolio1.jpg",
     "width": 1920,
     "height": 1439,
     "thumbWidth": 600,
@@ -6928,7 +6928,7 @@
   {
     "file": "images/concept-art/MysterySociety_ShipLayouts_Portfolio2.jpg",
     "thumbnail": "thumbnails/concept-art/MysterySociety_ShipLayouts_Portfolio2_thumbnail.jpg",
-    "placeholder": null,
+    "placeholder": "gallery-blur-placeholders/concept-art/mysterysociety_shiplayouts_portfolio2.jpg",
     "width": 1920,
     "height": 1602,
     "thumbWidth": 600,
@@ -6944,9 +6944,9 @@
     "sort": 999
   },
   {
-    "file": "images/2d-animation/001. 2D Reel_sm.mov",
+    "file": "https://animation.williammcguire.net/2d-animation/001.%202D%20Reel_sm.mov",
     "thumbnail": "thumbnails/2d-animation/001. 2D Reel_sm_thumbnail.png",
-    "placeholder": null,
+    "placeholder": "gallery-blur-placeholders/2d-animation/001. 2D Reel_sm.png",
     "width": null,
     "height": null,
     "thumbWidth": 600,
@@ -6963,9 +6963,9 @@
     "isVideo": true
   },
   {
-    "file": "images/2d-animation/002. AdAgency.OxygenNetwork.SPE-Screening-1.mp4",
+    "file": "https://animation.williammcguire.net/2d-animation/002.%20AdAgency.OxygenNetwork.SPE-Screening-1.mp4",
     "thumbnail": "thumbnails/2d-animation/002. AdAgency.OxygenNetwork.SPE-Screening-1_thumbnail.png",
-    "placeholder": null,
+    "placeholder": "gallery-blur-placeholders/2d-animation/002. AdAgency.OxygenNetwork.SPE-Screening-1.png",
     "width": null,
     "height": null,
     "thumbWidth": 600,
@@ -6982,9 +6982,9 @@
     "isVideo": true
   },
   {
-    "file": "images/2d-animation/003. AdAgency.OxygenNetwork.SPE-Selecting-1.mp4",
+    "file": "https://animation.williammcguire.net/2d-animation/003.%20AdAgency.OxygenNetwork.SPE-Selecting-1.mp4",
     "thumbnail": "thumbnails/2d-animation/003. AdAgency.OxygenNetwork.SPE-Selecting-1_thumbnail.png",
-    "placeholder": null,
+    "placeholder": "gallery-blur-placeholders/2d-animation/003. AdAgency.OxygenNetwork.SPE-Selecting-1.png",
     "width": null,
     "height": null,
     "thumbWidth": 600,
@@ -7001,9 +7001,9 @@
     "isVideo": true
   },
   {
-    "file": "images/2d-animation/004. AdAgency.OxygenNetwork.SPE-Interviewing-1.mp4",
+    "file": "https://animation.williammcguire.net/2d-animation/004.%20AdAgency.OxygenNetwork.SPE-Interviewing-1.mp4",
     "thumbnail": "thumbnails/2d-animation/004. AdAgency.OxygenNetwork.SPE-Interviewing-1_thumbnail.png",
-    "placeholder": null,
+    "placeholder": "gallery-blur-placeholders/2d-animation/004. AdAgency.OxygenNetwork.SPE-Interviewing-1.png",
     "width": null,
     "height": null,
     "thumbWidth": 600,
@@ -7020,9 +7020,9 @@
     "isVideo": true
   },
   {
-    "file": "images/2d-animation/005. FootballGuysRunCycles_Portfolio.mp4",
+    "file": "https://animation.williammcguire.net/2d-animation/005.%20FootballGuysRunCycles_Portfolio.mp4",
     "thumbnail": "thumbnails/2d-animation/005. FootballGuysRunCycles_Portfolio_thumbnail.png",
-    "placeholder": null,
+    "placeholder": "gallery-blur-placeholders/2d-animation/005. FootballGuysRunCycles_Portfolio.png",
     "width": null,
     "height": null,
     "thumbWidth": 600,
@@ -7039,9 +7039,9 @@
     "isVideo": true
   },
   {
-    "file": "images/2d-animation/006. Splainers.HUC001_MAIN_1.2.mp4",
+    "file": "https://animation.williammcguire.net/2d-animation/006.%20Splainers.HUC001_MAIN_1.2.mp4",
     "thumbnail": "thumbnails/2d-animation/006. Splainers.HUC001_MAIN_1.2_thumbnail.png",
-    "placeholder": null,
+    "placeholder": "gallery-blur-placeholders/2d-animation/006. Splainers.HUC001_MAIN_1.2.png",
     "width": null,
     "height": null,
     "thumbWidth": 600,
@@ -7058,9 +7058,9 @@
     "isVideo": true
   },
   {
-    "file": "images/2d-animation/007. Microsoft.astral_all_horiz_480.mov",
+    "file": "https://animation.williammcguire.net/2d-animation/007.%20Microsoft.astral_all_horiz_480.mov",
     "thumbnail": "thumbnails/2d-animation/007. Microsoft.astral_all_horiz_480_thumbnail.png",
-    "placeholder": null,
+    "placeholder": "gallery-blur-placeholders/2d-animation/007. Microsoft.astral_all_horiz_480.png",
     "width": null,
     "height": null,
     "thumbWidth": 600,
@@ -7077,9 +7077,9 @@
     "isVideo": true
   },
   {
-    "file": "images/2d-animation/009. Microsoft.metal_all_horiz_480.mov",
-    "thumbnail": "thumbnails/2d-animation/009. Microsoft.metal_all_horiz_480_thumbnail.png",
-    "placeholder": null,
+    "file": "https://animation.williammcguire.net/2d-animation/008.%20Microsoft.metal_all_horiz_480.mov",
+    "thumbnail": "thumbnails/2d-animation/008. Microsoft.metal_all_horiz_480_thumbnail.png",
+    "placeholder": "gallery-blur-placeholders/2d-animation/008. Microsoft.metal_all_horiz_480.png",
     "width": null,
     "height": null,
     "thumbWidth": 600,
@@ -7096,9 +7096,9 @@
     "isVideo": true
   },
   {
-    "file": "images/2d-animation/010. Microsoft.energy_all_horiz_480.mov",
-    "thumbnail": "thumbnails/2d-animation/010. Microsoft.energy_all_horiz_480_thumbnail.png",
-    "placeholder": null,
+    "file": "https://animation.williammcguire.net/2d-animation/009.%20Microsoft.energy_all_horiz_480.mov",
+    "thumbnail": "thumbnails/2d-animation/009. Microsoft.energy_all_horiz_480_thumbnail.png",
+    "placeholder": "gallery-blur-placeholders/2d-animation/009. Microsoft.energy_all_horiz_480.png",
     "width": null,
     "height": null,
     "thumbWidth": 600,
@@ -7115,9 +7115,9 @@
     "isVideo": true
   },
   {
-    "file": "images/2d-animation/011. Microsoft.water_all_horiz_480.mov",
-    "thumbnail": "thumbnails/2d-animation/011. Microsoft.water_all_horiz_480_thumbnail.png",
-    "placeholder": null,
+    "file": "https://animation.williammcguire.net/2d-animation/010.%20Microsoft.water_all_horiz_480.mov",
+    "thumbnail": "thumbnails/2d-animation/010. Microsoft.water_all_horiz_480_thumbnail.png",
+    "placeholder": "gallery-blur-placeholders/2d-animation/010. Microsoft.water_all_horiz_480.png",
     "width": null,
     "height": null,
     "thumbWidth": 600,
@@ -7134,9 +7134,9 @@
     "isVideo": true
   },
   {
-    "file": "images/2d-animation/012. Microsoft.earth_all_horiz_480.mov",
-    "thumbnail": "thumbnails/2d-animation/012. Microsoft.earth_all_horiz_480_thumbnail.png",
-    "placeholder": null,
+    "file": "https://animation.williammcguire.net/2d-animation/011.%20Microsoft.earth_all_horiz_480.mov",
+    "thumbnail": "thumbnails/2d-animation/011. Microsoft.earth_all_horiz_480_thumbnail.png",
+    "placeholder": "gallery-blur-placeholders/2d-animation/011. Microsoft.earth_all_horiz_480.png",
     "width": null,
     "height": null,
     "thumbWidth": 600,
@@ -7153,9 +7153,9 @@
     "isVideo": true
   },
   {
-    "file": "images/2d-animation/013. Microsoft.fire_all_horiz_480.mov",
-    "thumbnail": "thumbnails/2d-animation/013. Microsoft.fire_all_horiz_480_thumbnail.png",
-    "placeholder": null,
+    "file": "https://animation.williammcguire.net/2d-animation/012.%20Microsoft.fire_all_horiz_480.mov",
+    "thumbnail": "thumbnails/2d-animation/012. Microsoft.fire_all_horiz_480_thumbnail.png",
+    "placeholder": "gallery-blur-placeholders/2d-animation/012. Microsoft.fire_all_horiz_480.png",
     "width": null,
     "height": null,
     "thumbWidth": 600,
@@ -7172,9 +7172,9 @@
     "isVideo": true
   },
   {
-    "file": "images/2d-animation/014. Microsoft.wood_all_horiz_480.mov",
-    "thumbnail": "thumbnails/2d-animation/014. Microsoft.wood_all_horiz_480_thumbnail.png",
-    "placeholder": null,
+    "file": "https://animation.williammcguire.net/2d-animation/013.%20Microsoft.wood_all_horiz_480.mov",
+    "thumbnail": "thumbnails/2d-animation/013. Microsoft.wood_all_horiz_480_thumbnail.png",
+    "placeholder": "gallery-blur-placeholders/2d-animation/013. Microsoft.wood_all_horiz_480.png",
     "width": null,
     "height": null,
     "thumbWidth": 600,
@@ -7191,9 +7191,9 @@
     "isVideo": true
   },
   {
-    "file": "images/2d-animation/015. Microsoft.air_all_horiz_480.mov",
-    "thumbnail": "thumbnails/2d-animation/015. Microsoft.air_all_horiz_480_thumbnail.png",
-    "placeholder": null,
+    "file": "https://animation.williammcguire.net/2d-animation/014.%20Microsoft.air_all_horiz_480.mov",
+    "thumbnail": "thumbnails/2d-animation/014. Microsoft.air_all_horiz_480_thumbnail.png",
+    "placeholder": "gallery-blur-placeholders/2d-animation/014. Microsoft.air_all_horiz_480.png",
     "width": null,
     "height": null,
     "thumbWidth": 600,
@@ -7210,9 +7210,9 @@
     "isVideo": true
   },
   {
-    "file": "images/3d-animation/001. 3D Reel_sm.mov",
+    "file": "https://animation.williammcguire.net/3d-animation/001.%203D%20Reel_sm.mov",
     "thumbnail": "thumbnails/3d-animation/001. 3D Reel_sm_thumbnail.png",
-    "placeholder": null,
+    "placeholder": "gallery-blur-placeholders/3d-animation/001. 3D Reel_sm.png",
     "width": null,
     "height": null,
     "thumbWidth": 600,
@@ -7229,9 +7229,9 @@
     "isVideo": true
   },
   {
-    "file": "images/3d-animation/002. smashrun.mov",
+    "file": "https://animation.williammcguire.net/3d-animation/002.%20smashrun.mov",
     "thumbnail": "thumbnails/3d-animation/002. smashrun_thumbnail.png",
-    "placeholder": null,
+    "placeholder": "gallery-blur-placeholders/3d-animation/002. smashrun.png",
     "width": null,
     "height": null,
     "thumbWidth": 600,
@@ -7248,9 +7248,9 @@
     "isVideo": true
   },
   {
-    "file": "images/3d-animation/003. rockfall.mov",
+    "file": "https://animation.williammcguire.net/3d-animation/003.%20rockfall.mov",
     "thumbnail": "thumbnails/3d-animation/003. rockfall_thumbnail.png",
-    "placeholder": null,
+    "placeholder": "gallery-blur-placeholders/3d-animation/003. rockfall.png",
     "width": null,
     "height": null,
     "thumbWidth": 600,
@@ -7267,9 +7267,9 @@
     "isVideo": true
   },
   {
-    "file": "images/3d-animation/004. ElevatedGames.Trailer_KaijuKombat.mp4",
+    "file": "https://animation.williammcguire.net/3d-animation/004.%20ElevatedGames.Trailer_KaijuKombat.mp4",
     "thumbnail": "thumbnails/3d-animation/004. ElevatedGames.Trailer_KaijuKombat_thumbnail.png",
-    "placeholder": null,
+    "placeholder": "gallery-blur-placeholders/3d-animation/004. ElevatedGames.Trailer_KaijuKombat.png",
     "width": null,
     "height": null,
     "thumbWidth": 600,
@@ -7288,7 +7288,7 @@
   {
     "file": "images/toy-design/120. HELIO CASTRONEVES.png",
     "thumbnail": "thumbnails/toy-design/120. HELIO CASTRONEVES_thumbnail.png",
-    "placeholder": null,
+    "placeholder": "gallery-blur-placeholders/toy-design/120. HELIO CASTRONEVES.png",
     "width": 1920,
     "height": 812,
     "thumbWidth": 600,
