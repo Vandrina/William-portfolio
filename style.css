@@ -112,6 +112,39 @@ body {
   margin: 0 auto;
 }
 
+/* Sections - Background Colors */
+.section-dark {
+  background: var(--bg);
+}
+.section-light {
+  background: var(--bg-2);
+} 
+.section-lighter {
+  background: var(--bg3);
+}
+
+/* ── SECTION BLOCKS ── */
+.section {
+  padding: 40px 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sec-title {
+  font-family: var(--font-head);
+  font-size: 23px;
+  font-weight: 600;
+  color: var(--mid);
+  letter-spacing: -0.02em;
+  margin: 12px 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 36px 20px;
+  }
+}
+
 /* Spacers */
 .spacer-sm { height: 10px; }
 .spacer-md { height: 25px; }
@@ -358,38 +391,12 @@ body {
   }
 }
 
-/* EDIT POTENTIAL: may need to adjust the sticky filter-wrap for mobile*/
-
-/* ── SECTION BLOCKS ── */
-.section {
-  padding: 40px 32px;
-  border-bottom: 1px solid var(--border);
-}
-
-.section.alt-bg {
-  background: var(--bg-2);
-}
-
-.sec-title {
-  font-family: var(--font-head);
-  font-size: 23px;
-  font-weight: 600;
-  color: var(--mid);
-  letter-spacing: -0.02em;
-  margin: 12px 0;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .section {
-    padding: 36px 20px;
-  }
-}
 
 /* ── BUTTONS ── */
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   padding: 9px 18px;
   font-family: var(--font-head);
@@ -400,6 +407,12 @@ body {
   cursor: pointer;
   transition: border-color 0.2s, color 0.2s, background 0.2s;
   border: 1px solid transparent;
+}
+
+.btn-large {
+  padding: 14px 42px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .btn-gold {
@@ -574,15 +587,6 @@ body {
 */
 
 /* ---HOMEPAGE---*/
-
-/* Homepage section backgrounds */
-.section-disc {
-  background: var(--bg);
-}
-
-.section-clients {
-  background: var(--bg-2);
-}
 
 /* ── HERO (homepage) ── */
 .hero-wrap {
@@ -1032,7 +1036,25 @@ body {
   transition: left 0.6s ease;
 }
 
+/* ── CTA STRIP ── */
+.cta-strip {
+  display: flex;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+}
 
+@media (max-width: 768px) {
+  .cta-strip {
+    flex-direction: column;
+    max-width: 320px;
+    gap: 12px;
+  }
+  
+  .cta-strip .btn {
+    max-width: none;
+  }
+}
 
 
 /* -- --GALLERY-- -- */
