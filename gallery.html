@@ -115,27 +115,36 @@
   </div>
 
   <!-- Scroll to top -->
-  <button class="scroll-top" id="scrollTop" aria-label="Back to top">^</button>
+  <button class="scroll-top btn-icon" id="scrollTop" aria-label="Back to top">^</button>
 
   <div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose">✕</button>
-  <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
-  <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
-  <div class="lightbox-inner">
-    <div class="lightbox-loading" id="lightboxLoading">
-      <div class="spinner"></div>
-      <div class="loading-text">Loading video...</div>
+    <div class="lightbox-controls">
+      <button class="lightbox-share btn-icon" id="lightboxShare" aria-label="Copy share link" title="Copy link">
+  <svg width="16" height="20" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 0L8 11M8 0L5 3M8 0L11 3" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M2 11V15C2 16.1046 2.89543 17 4 17H12C13.1046 17 14 16.1046 14 15V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </svg>
+</button>
+      <span class="share-feedback" id="shareFeedback">Link copied!</span>
+      <button class="lightbox-close btn-icon" id="lightboxClose">✕</button>
     </div>
-    <img class="lightbox-img" id="lightboxImg" src="" alt="">
-    <video class="lightbox-video" id="lightboxVideo" controls preload="metadata" style="display:none;">
-      <source id="lightboxVideoSource" src="" type="video/mp4">
-    </video>
-    <div class="lightbox-meta">
-      <span class="lightbox-discipline" id="lightboxDiscipline"></span>
-      <span class="lightbox-client" id="lightboxClient"></span>
+    <button class="lightbox-nav lightbox-prev btn-icon" id="lightboxPrev">‹</button>
+    <button class="lightbox-nav lightbox-next btn-icon" id="lightboxNext">›</button>
+    <div class="lightbox-inner">
+      <div class="lightbox-loading" id="lightboxLoading">
+        <div class="spinner"></div>
+        <div class="loading-text">Loading video...</div>
+      </div>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="">
+      <video class="lightbox-video" id="lightboxVideo" controls preload="metadata" style="display:none;">
+        <source id="lightboxVideoSource" src="" type="video/mp4">
+      </video>
+      <div class="lightbox-meta">
+        <span class="lightbox-discipline" id="lightboxDiscipline"></span>
+        <span class="lightbox-client" id="lightboxClient"></span>
+      </div>
     </div>
   </div>
-</div>
 
   <footer class="footer">
   <div class="footer-main">
@@ -592,7 +601,28 @@
         if (e.key === 'ArrowLeft') { lightboxIndex = (lightboxIndex - 1 + visibleItems.length) % visibleItems.length; showLightboxItem(); }
         if (e.key === 'ArrowRight') { lightboxIndex = (lightboxIndex + 1) % visibleItems.length; showLightboxItem(); }
       });
-
+      // Share button - copy image.html link
+document.getElementById('lightboxShare').addEventListener('click', function() {
+  var index = visibleItems[lightboxIndex];
+  var item = manifest[index];
+  var slug = item.file.split('/').pop().replace(/\.[^.]+$/, '');
+  
+  var basePath = window.location.pathname.replace(/gallery(\.html)?$/, 'image.html');
+  var shareUrl = window.location.origin + basePath + '?img=' + encodeURIComponent(slug);
+  
+  navigator.clipboard.writeText(shareUrl).then(function() {
+  var btn = document.getElementById('lightboxShare');
+  var feedback = document.getElementById('shareFeedback');
+  
+  btn.style.opacity = '0.5'; // Dim on click instead of changing icon
+  feedback.classList.add('show');
+  
+  setTimeout(function() {
+    btn.style.opacity = '';
+    feedback.classList.remove('show');
+  }, 1500);
+});
+});
       function formatLabel(slug) {
         if (!slug) return '';
 
