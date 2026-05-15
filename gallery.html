@@ -562,36 +562,8 @@
       }
 
       function openLightbox(index) {
-  lightboxIndex = visibleItems.indexOf(index);
-  if (lightboxIndex === -1) lightboxIndex = 0;
-  
-  showLightboxItem();
-  lightbox.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-if (window.goatcounter) {
-  console.log('✓ GoatCounter firing'); // DEBUG
-  window.goatcounter.count({
-    path: 'gallery-click-' + (item.file || '').split('/').pop().replace(/\.[^.]+$/, ''),
-    title: ((item.discipline || []).join(' ') + ' — ' + (item.clients || []).join(' ')),
-    event: true
-  });
-}
-
-if (window.gtag) {
-  console.log('✓ GA4 firing'); // DEBUG
-  gtag('event', 'gallery_image_click', {
-    'image_file': (item.file || '').split('/').pop(),
-    'image_discipline': (item.discipline || []).join(','),
-    'image_client': (item.clients || []).join(',')
-  });
-}
-  
-  showLightboxItem();
-  lightbox.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
+        lightboxIndex = visibleItems.indexOf(index);
+        if (lightboxIndex === -1) lightboxIndex = 0;
         showLightboxItem();
         lightbox.classList.add('open');
         document.body.style.overflow = 'hidden';
