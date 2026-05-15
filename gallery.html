@@ -568,15 +568,15 @@
         lightbox.classList.add('open');
         document.body.style.overflow = 'hidden';
       }
- // Track image clicks with GoatCounter
-  if (window.goatcounter && manifest[index]) {
-    var item = manifest[index];
-    var filename = (item.file || '').split('/').pop().replace(/\.[^.]+$/, '');
-    window.goatcounter.count({
-      path: 'gallery/' + filename,
-      event: true
-    });
-  }
+ // Track image clicks with GoatCounter - will evaluate with GC later
+ // if (window.goatcounter && manifest[index]) {
+   // var item = manifest[index];
+    //var filename = (item.file || '').split('/').pop().replace(/\.[^.]+$/, '');
+    //window.goatcounter.count({
+      //path: 'gallery/' + filename,
+      //event: true
+    //});
+  //}
       function showLightboxItem() {
   var index = visibleItems[lightboxIndex];
   var item = manifest[index];
