@@ -5,9 +5,9 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   
-  # Content Security Policy
-  # Allows: your site, Google Fonts, Google Analytics, Goat Counter, Cloudflare R2, GitHub assets
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' gc.zgo.at *.goatcounter.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: *.goatcounter.com animation.williammcguire.net *.cloudflare.com githubusercontent.com *.githubusercontent.com; media-src 'self' animation.williammcguire.net *.r2.cloudflarestorage.com *.cloudflare.com; connect-src 'self' *.goatcounter.com animation.williammcguire.net *.r2.cloudflarestorage.com https://www.google-analytics.com https://www.googletagmanager.com https://analytics.google.com https://www.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';
+# Content Security Policy
+  # Allows: your site, Google Fonts, Goat Counter, Cloudflare R2, GitHub assets
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' gc.zgo.at *.goatcounter.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: *.goatcounter.com animation.williammcguire.net *.cloudflare.com githubusercontent.com *.githubusercontent.com; media-src 'self' animation.williammcguire.net *.r2.cloudflarestorage.com *.cloudflare.com; connect-src 'self' *.goatcounter.com animation.williammcguire.net *.r2.cloudflarestorage.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';
 
   # Additional Security
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
